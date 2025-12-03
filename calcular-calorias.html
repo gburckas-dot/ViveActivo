@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Cómo calcular cuántas calorías consumís al día | ViveActivo</title>
+
+  <meta name="description" content="Guía simple para entender cuántas calorías consumís por día. Usá porciones fáciles de visualizar (puño, vaso, cucharada) para estimar tu ingesta y tomar control de tu déficit calórico sin volverte loco." />
+
+  <!-- Canonical: si cambiás el nombre del archivo, actualizá esta URL -->
+  <link rel="canonical" href="https://gburckas-dot.github.io/ViveActivo/calcular-calorias.html" />
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="Cómo calcular cuántas calorías consumís al día" />
+  <meta property="og:description" content="La mayoría subestima cuánto come. Usá esta guía y herramienta simple basada en porciones reales (un puño, un vaso, una cucharada) para entender tu ingesta diaria." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://gburckas-dot.github.io/ViveActivo/calcular-calorias.html" />
+  <meta property="og:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Cómo calcular cuántas calorías consumís al día" />
+  <meta name="twitter:description" content="Guía práctica + herramienta simple para estimar tu ingesta calórica diaria con porciones que podés ver y sentir en la mano." />
+  <meta name="twitter:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
+
+  <!-- Tipografía (igual que la home) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #F9FAFB;
+      --color-bg-soft: #FFFFFF;
+      --color-primary: #10B981;
+      --color-primary-soft: #D1FAE5;
+      --color-primary-strong: #059669;
+      --color-text: #111827;
+      --color-muted: #6B7280;
+      --color-border-soft: #E5E7EB;
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-subtle: 0 4px 12px rgba(15, 23, 42, 0.06);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --max-width: 960px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #ECFEFF 0, #F9FAFB 40%, #FFFFFF 100%);
+      color: var(--color-text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .back-link {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #F3F4F6;
+      box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    }
+
+    .back-link span {
+      font-size: 1rem;
+    }
+
+    header {
+      margin-bottom: 22px;
+    }
+
+    header h1 {
+      font-size: clamp(2rem, 3.2vw, 2.4rem);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    header h1 span {
+      color: var(--color-primary);
+    }
+
+    header p {
+      font-size: 0.96rem;
+      color: var(--color-muted);
+      max-width: 36rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      background: rgba(16, 185, 129, 0.07);
+      color: var(--color-primary-strong);
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      font-size: 1.28rem;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      color: var(--color-muted);
+    }
+
+    ul {
+      margin-left: 18px;
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    .card {
+      background: var(--color-bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 14px 16px 16px;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+
+    .hint {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+    }
+
+    .calc-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .calc-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .badge {
+      font-size: 0.74rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #ECFDF3;
+      color: var(--color-primary-strong);
+      font-weight: 500;
+    }
+
+    .table-wrapper {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border-soft);
+      overflow: hidden;
+      background: #F9FAFB;
+      margin-bottom: 10px;
+      max-height: 420px;
+      overflow-y: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+    }
+
+    th, td {
+      padding: 8px 8px;
+      border-bottom: 1px solid #E5E7EB;
+      vertical-align: top;
+    }
+
+    th {
+      background: #F3F4F6;
+      text-align: left;
+      font-weight: 500;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .alimento {
+      font-weight: 500;
+      color: var(--color-text);
+      margin-bottom: 2px;
+    }
+
+    .porcion {
+      font-size: 0.75rem;
+      color: var(--color-muted);
+    }
+
+    .kcal-cell {
+      white-space: nowrap;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid var(--color-border-soft);
+      padding: 4px 8px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      outline: none;
+      background: #FFFFFF;
+      text-align: right;
+    }
+
+    input[type="number"]:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.18);
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-primary);
+      color: white;
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-muted);
+      border: 1px solid var(--color-border-soft);
+      box-shadow: none;
+    }
+
+    .btn-secondary:hover {
+      background: #F3F4F6;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .total-box {
+      border-radius: var(--radius-md);
+      background: #F9FAFB;
+      border: 1px dashed #E5E7EB;
+      padding: 10px 10px;
+      font-size: 0.86rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 6px;
+    }
+
+    .total-main {
+      font-weight: 600;
+    }
+
+    .total-value {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-primary-strong);
+    }
+
+    .total-note {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+    }
+
+    .danger {
+      color: #B91C1C;
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 18px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) - mismo ID que en el index -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X791HK4NMY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X791HK4NMY');
+  </script>
+</head>
+<body>
+  <div class="page">
+    <a href="index.html" class="back-link">
+      <span>←</span> Volver a ViveActivo
+    </a>
+
+    <header>
+      <div class="pill">
+        Calorías de la comida · ViveActivo
+      </div>
+      <h1>Cómo calcular cuántas calorías <span>consumís al día</span></h1>
+      <p>
+        No hace falta pesar cada gramo para entender qué está pasando. Con porciones simples
+        (un puño, un vaso, una cucharada) podés tener una estimación honesta de tu ingesta diaria
+        y dejar de sentir que “hacés todo bien y no pasa nada”.
+      </p>
+    </header>
+
+    <div class="layout">
+      <!-- COLUMNA IZQUIERDA: TEXTO EXPLICATIVO -->
+      <div>
+        <section>
+          <h2>Por qué casi todos subestimamos lo que comemos</h2>
+          <p>
+            Cuando alguien dice “como poco y no bajo”, casi siempre ocurre una mezcla de esto:
+          </p>
+          <ul>
+            <li>No cuenta los “extras” (aceite, pan, queso, picoteos, bebidas).</li>
+            <li>Subestima las porciones: un puño de frutos secos no son 50 kcal, son 150–200.</li>
+            <li>Registra las comidas principales, pero no los snacks entre horas.</li>
+            <li>Come sano… pero en cantidades más grandes de lo que cree.</li>
+          </ul>
+          <p>
+            La idea de esta herramienta no es ser precisa al milímetro, sino ayudarte a ser
+            <strong>consciente</strong>. Si estabas imaginando “1.300 kcal” y te da “2.100 kcal”,
+            ya entendiste mucho más que con cualquier dieta perfecta.
+          </p>
+        </section>
+
+        <section>
+          <h2>Método simple con porciones visibles</h2>
+
+          <h3>1. Elegí un día normal</h3>
+          <p>
+            No el día perfecto de Instagram. Elegí un día realista donde comas como siempre:
+            trabajo, chicos, cansancio, picoteos, todo incluido.
+          </p>
+
+          <h3>2. Marcá lo que se parece a lo que comiste</h3>
+          <p>
+            En la tabla de la derecha tenés alimentos y porciones de referencia:
+            <strong>un puño, una palma, un vaso, un plato, una cucharada</strong>. Elegí los que
+            se parecen más a tu día y poné la cantidad de porciones.
+          </p>
+
+          <h3>3. Mirá el número, sin juzgar</h3>
+          <p>
+            El total no es para castigarte, es para entender. Si ves que la mayor parte viene de
+            bebidas o extras, ya sabés dónde tocar sin hacer locuras.
+          </p>
+        </section>
+
+        <section>
+          <h2>Comida rica, vida real y días de disfrute</h2>
+          <p>
+            La comida también es parte de las alegrías de la vida. No se trata de vivir a pollo hervido
+            y lechuga para siempre, sino de entender el contexto: <strong>bajar</strong> de peso es un
+            proceso, <strong>mantener</strong> el peso es otro mucho más flexible.
+          </p>
+          <p>
+            Podés pensar tu plan en fases: por ejemplo, una etapa donde tenés
+            <strong>5 días de déficit</strong> y <strong>2 días de disfrute más libre</strong>, sabiendo
+            que esos días de disfrute también tienen un costo calórico y que no hace falta “reventarse”
+            para disfrutarlos.
+          </p>
+          <p>
+            Saber que una porción de pizza, una empanada o un helado tienen un número aproximado te permite
+            elegir con calma: quizá bajás un poco la cantidad, compensás con caminata, o guardás algunos
+            alimentos de disfrute para tus días “off” sin culpa ni autoengaño.
+          </p>
+        </section>
+
+        <section>
+          <h2>¿Qué hago con este número?</h2>
+          <p>
+            Una vez que tenés una idea aproximada de cuántas calorías estás comiendo:
+          </p>
+          <ul>
+            <li>Podés compararlo con tu gasto estimado (tu mantenimiento).</li>
+            <li>Podés recortar 200–300 kcal en lugar de intentar recortar 1.000.</li>
+            <li>Podés combinarlo con las <strong>calculadoras de caminata</strong> de ViveActivo.</li>
+          </ul>
+          <p>
+            El objetivo no es vivir contando calorías, sino usarlas un tiempo como
+            <strong>lupa</strong> para entender qué está pasando y luego seguir con más intuición.
+          </p>
+        </section>
+      </div>
+
+      <!-- COLUMNA DERECHA: HERRAMIENTA -->
+      <div>
+        <div class="calc-header">
+          <div class="calc-title">Herramienta por porciones reales</div>
+          <span class="badge">0,5 = media · 1 = una · 2 = dos porciones</span>
+        </div>
+        <p class="hint">
+          Marcá cuántas porciones aproximadas comiste hoy de cada grupo. Cada fila ya tiene una porción
+          de referencia (un puño, un vaso, un plato, una unidad). <strong>0,5</strong> es media porción,
+          <strong>1</strong> es una porción, <strong>2</strong> son dos, etc. No buscamos precisión,
+          buscamos conciencia.
+        </p>
+
+        <div class="table-wrapper">
+          <table id="tabla-calorias">
+            <thead>
+              <tr>
+                <th>Alimento / porción referencia</th>
+                <th>kcal por porción</th>
+                <th>Porciones que comiste</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Se completa por JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:8px;">
+          <button class="btn-secondary" type="button" onclick="reiniciarPorciones()">
+            Reiniciar porciones
+          </button>
+        </div>
+
+        <div class="total-box" id="resultado-calorias">
+          <div class="total-main">Ingesta estimada del día</div>
+          <div class="total-value" id="total-kcal">0 kcal</div>
+          <div class="total-note" id="nota-kcal">
+            Completá algunas porciones para ver tu estimación. No buscamos precisión quirúrgica,
+            buscamos conciencia.
+          </div>
+        </div>
+
+        <p class="hint">
+          Referencia general (no es una regla rígida): muchas personas adultas mantienen su peso entre
+          <strong>1.800 y 2.400 kcal</strong> por día, según contexto, peso y actividad.
+          Si querés déficit, suele ser más sostenible recortar 200–300 kcal de tu ingesta habitual,
+          no 1.000 de golpe.
+        </p>
+
+        <div class="card">
+          <h3>Combinar ingesta y caminata cambia el juego</h3>
+          <p>
+            Si entendés:
+          </p>
+          <ul>
+            <li>cuánto estás comiendo (aunque sea aproximado), y</li>
+            <li>cuánto podés gastar con movimiento simple (caminata, rucking),</li>
+          </ul>
+          <p>
+            dejás de pelearte con el cuerpo y empezás a tener un tablero: lo que entra,
+            lo que sale y el margen para construir tu déficit.
+          </p>
+          <p>
+            Volver a la página principal: <a href="index.html">ViveActivo – Bienestar simple</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>ViveActivo · Bienestar simple y sostenible.</div>
+      <div>Página experimental · No reemplaza asesoramiento profesional.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Lista de alimentos con porciones visuales y kcal aproximadas por porción
+    const ALIMENTOS = [
+      // Proteínas y bases "sanas"
+      { texto: 'Pechuga de pollo a la plancha', porcion: '1 palma de mano (≈120 g)', kcal: 220 },
+      { texto: 'Carne vacuna magra', porcion: '1 palma de mano (≈120 g)', kcal: 250 },
+      { texto: 'Pescado blanco', porcion: '1 palma de mano (≈120 g)', kcal: 180 },
+      { texto: 'Huevo entero', porcion: '1 unidad', kcal: 75 },
+      { texto: 'Claras de huevo', porcion: '3 claras (≈1 puño en un bowl)', kcal: 50 },
+
+      // Legumbres y cereales
+      { texto: 'Lentejas cocidas', porcion: '1 plato hondo chico o 1 taza', kcal: 200 },
+      { texto: 'Garbanzos cocidos', porcion: '1 plato hondo chico o 1 taza', kcal: 220 },
+      { texto: 'Arroz blanco cocido', porcion: '1 puño grande (≈1 taza baja)', kcal: 200 },
+      { texto: 'Arroz integral cocido', porcion: '1 puño grande (≈1 taza baja)', kcal: 215 },
+      { texto: 'Pasta cocida', porcion: '1 plato playo chico colmado', kcal: 220 },
+      { texto: 'Papa hervida', porcion: '1 unidad mediana (tamaño puño)', kcal: 120 },
+      { texto: 'Batata al horno', porcion: '1 unidad mediana (tamaño puño)', kcal: 150 },
+      { texto: 'Pan (blanco o integral)', porcion: '2 rebanadas finas o 1 figaza chica', kcal: 140 },
+      { texto: 'Avena seca', porcion: '4 cucharadas soperas (≈1/2 taza)', kcal: 150 },
+
+      // Verduras y frutas
+      { texto: 'Ensalada de hojas verdes', porcion: '1 plato grande colmado', kcal: 50 },
+      { texto: 'Verduras mixtas (al horno / salteadas)', porcion: '1 plato mediano', kcal: 80 },
+      { texto: 'Fruta (manzana, pera, naranja)', porcion: '1 unidad (tamaño puño)', kcal: 80 },
+      { texto: 'Banana mediana', porcion: '1 unidad', kcal: 100 },
+
+      // Grasas y toppings
+      { texto: 'Aceite (oliva, girasol, etc.)', porcion: '1 cucharada sopera', kcal: 90 },
+      { texto: 'Manteca / margarina', porcion: '1 cucharada sopera al ras', kcal: 100 },
+      { texto: 'Frutos secos', porcion: '1 puñado pequeño (cavidad de la mano)', kcal: 170 },
+      { texto: 'Queso duro / semiduro', porcion: '1 cubito chico (≈tapa de caja de fósforos)', kcal: 120 },
+      { texto: 'Queso untable light', porcion: '2 cucharadas soperas', kcal: 60 },
+      { texto: 'Mayonesa común', porcion: '1 cucharada sopera colmada', kcal: 90 },
+      { texto: 'Azúcar', porcion: '1 cucharada sopera colmada', kcal: 60 },
+
+      // Lácteos
+      { texto: 'Leche entera', porcion: '1 vaso común (200 ml)', kcal: 130 },
+      { texto: 'Leche descremada', porcion: '1 vaso común (200 ml)', kcal: 80 },
+      { texto: 'Yogur azucarado', porcion: '1 pote chico', kcal: 120 },
+      { texto: 'Yogur natural / sin azúcar', porcion: '1 pote chico', kcal: 80 },
+
+      // Bebidas y alcohol
+      { texto: 'Gaseosa azucarada', porcion: '1 vaso común (200 ml)', kcal: 90 },
+      { texto: 'Jugo industrial azucarado', porcion: '1 vaso común (200 ml)', kcal: 90 },
+      { texto: 'Vino', porcion: '1 copa chica', kcal: 120 },
+      { texto: 'Cerveza', porcion: '1 lata (330 ml)', kcal: 150 },
+
+      // Comidas de disfrute (vida real)
+      { texto: 'Pizza muzzarella', porcion: '1 porción grande (1/8 de una pizza grande)', kcal: 300 },
+      { texto: 'Hamburguesa completa con queso', porcion: '1 unidad', kcal: 550 },
+      { texto: 'Papas fritas', porcion: '1 porción tipo fast food', kcal: 400 },
+      { texto: 'Empanada de carne', porcion: '1 unidad', kcal: 250 },
+      { texto: 'Helado de crema', porcion: '2 bochas medianas en cucurucho o pote', kcal: 250 },
+      { texto: 'Alfajor relleno', porcion: '1 unidad estándar', kcal: 200 },
+      { texto: 'Factura / bollo dulce', porcion: '1 unidad promedio', kcal: 200 },
+      { texto: 'Medialuna de manteca', porcion: '1 unidad', kcal: 120 },
+      { texto: 'Galletitas dulces', porcion: '3 unidades', kcal: 140 },
+      { texto: 'Chocolate', porcion: '3 cuadraditos (≈30 g)', kcal: 150 }
+    ];
+
+    function crearTabla() {
+      const tbody = document.querySelector('#tabla-calorias tbody');
+      tbody.innerHTML = '';
+      ALIMENTOS.forEach(alimento => {
+        const tr = document.createElement('tr');
+        tr.dataset.kcal = alimento.kcal;
+        tr.innerHTML = `
+          <td>
+            <div class="alimento">${alimento.texto}</div>
+            <div class="porcion">${alimento.porcion}</div>
+          </td>
+          <td class="kcal-cell">${alimento.kcal} kcal</td>
+          <td>
+            <input type="number" value="0" min="0" step="0.5" class="cantidad" />
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.querySelectorAll('.cantidad').forEach(input => {
+        input.addEventListener('input', recalcularTotal);
+      });
+    }
+
+    function recalcularTotal() {
+      const filas = document.querySelectorAll('#tabla-calorias tbody tr');
+      let total = 0;
+
+      filas.forEach(fila => {
+        const cantInput = fila.querySelector('.cantidad');
+        const cant = parseFloat(cantInput.value) || 0;
+        const kcal = parseFloat(fila.dataset.kcal) || 0;
+        total += kcal * cant;
+      });
+
+      const totalElem = document.getElementById('total-kcal');
+      const notaElem = document.getElementById('nota-kcal');
+
+      totalElem.textContent = `${Math.round(total)} kcal`;
+
+      if (total === 0) {
+        notaElem.textContent = 'Completá algunas porciones para ver tu estimación. No buscamos precisión quirúrgica, buscamos conciencia.';
+        notaElem.classList.remove('danger');
+      } else if (total >= 2600) {
+        notaElem.textContent = 'Para muchas personas, este nivel de ingesta puede ser alto si el movimiento es bajo. No es una condena, es un dato para observar sin culpa.';
+        notaElem.classList.add('danger');
+      } else if (total >= 1900 && total <= 2600) {
+        notaElem.textContent = 'Para muchos adultos, este rango puede estar cerca del mantenimiento (depende de tu contexto, peso y actividad).';
+        notaElem.classList.remove('danger');
+      } else {
+        notaElem.textContent = 'Puede ser un rango más bajo de lo que pensabas. Mirá si se sostiene en varios días y cómo te sentís de energía.';
+        notaElem.classList.remove('danger');
+      }
+    }
+
+    function reiniciarPorciones() {
+      document.querySelectorAll('.cantidad').forEach(input => {
+        input.value = '0';
+      });
+      recalcularTotal();
+    }
+
+    // Inicializar tabla y cálculo al cargar
+    crearTabla();
+    recalcularTotal();
+  </script>
+</body>
+</html>
+
