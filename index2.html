@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>ViveActivo – Pequeños pasos, grandes cambios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO base -->
+  <meta
+    name="description"
+    content="ViveActivo es un método simple y sostenible para mejorar tu salud. Pequeños pasos, grandes cambios: caminata, déficit calórico, rucking y hábitos que podés sostener en la vida real."
+  />
+  <meta
+    name="keywords"
+    content="déficit calórico, caminata, rucking, bajar de peso caminando, salud simple, bienestar sostenible, hábitos saludables, perder grasa, método fácil de salud, guía para caminar, entrenamiento minimalista"
+  />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://gburckas-dot.github.io/ViveActivo/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ViveActivo – Pequeños pasos, grandes cambios" />
+  <meta property="og:description" content="Bienestar simple, caminata, déficit calórico, rucking y hábitos que podés sostener en la vida real. Pequeños pasos, grandes cambios." />
+  <meta property="og:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
+  <meta property="og:url" content="https://gburckas-dot.github.io/ViveActivo/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ViveActivo – Pequeños pasos, grandes cambios" />
+  <meta name="twitter:description" content="Bienestar simple, caminata, déficit calórico, rucking y hábitos sostenibles. Mejorá tu vida un paso a la vez." />
+  <meta name="twitter:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
+
+  <!-- Tipografía de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #F9FAFB;
+      --color-bg-soft: #FFFFFF;
+      --color-primary: #10B981;
+      --color-primary-soft: #D1FAE5;
+      --color-primary-strong: #059669;
+      --color-text: #111827;
+      --color-muted: #6B7280;
+      --color-border-soft: #E5E7EB;
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --shadow-subtle: 0 4px 12px rgba(15, 23, 42, 0.06);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top left, #ECFEFF 0, #F9FAFB 40%, #FFFFFF 100%);
+      color: var(--color-text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-img {
+      height: 140px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-img {
+        height: 96px;
+      }
+    }
+
+    .logo-icon {
+      font-size: 1.25rem;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .logo-main {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-main span {
+      color: var(--color-primary);
+    }
+
+    .logo-sub {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+
+    .header-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(16, 185, 129, 0.4);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--color-primary-soft);
+      color: var(--color-muted);
+    }
+
+    .btn-ghost:hover {
+      background: var(--color-primary-soft);
+      color: var(--color-text);
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.2rem, 4vw, 2.7rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .hero-text h1 span {
+      color: var(--color-primary);
+    }
+
+    .hero-text p {
+      font-size: 0.98rem;
+      color: var(--color-muted);
+      margin-bottom: 18px;
+      max-width: 480px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(209, 250, 229, 0.9);
+      color: var(--color-primary-strong);
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+      color: var(--color-muted);
+      font-size: 0.78rem;
+    }
+
+    .badge-pill {
+      background: rgba(16, 185, 129, 0.06);
+      border-radius: 999px;
+      padding: 6px 10px;
+    }
+
+    .hero-card {
+      background: var(--color-bg-soft);
+      border-radius: 24px;
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-card-title span {
+      font-size: 0.75rem;
+      color: var(--color-muted);
+      font-weight: 400;
+    }
+
+    .hero-card-rows {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .hero-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+
+    .hero-row-label {
+      color: var(--color-muted);
+    }
+
+    .hero-row-value {
+      font-weight: 500;
+    }
+
+    .hero-highlight {
+      margin-top: 6px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: var(--color-primary-soft);
+      font-size: 0.78rem;
+      color: #065F46;
+    }
+
+    /* SECCIONES GENERALES */
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-sub {
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      margin-bottom: 16px;
+      max-width: 34rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .step {
+      background: var(--color-bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .step-number {
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: var(--color-primary-soft);
+      color: #065F46;
+      font-size: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .step-title {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+
+    .step-text {
+      font-size: 0.82rem;
+      color: var(--color-muted);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+
+    .card-simple {
+      background: var(--color-bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(15, 23, 42, 0.04);
+      font-size: 0.85rem;
+      color: var(--color-muted);
+    }
+
+    .card-simple h3 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+
+    .list {
+      padding-left: 18px;
+      font-size: 0.85rem;
+      color: var(--color-muted);
+    }
+
+    .list li {
+      margin-bottom: 4px;
+    }
+
+    /* CALCULADORAS DE CAMINATA */
+
+    .calculators-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.1fr);
+      gap: 1.4rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 960px) {
+      .calculators-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--color-bg-soft);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1.25rem 1.4rem;
+      box-shadow: var(--shadow-subtle);
+      border: 1px solid rgba(229, 231, 235, 0.9);
+    }
+
+    .card h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1rem;
+    }
+
+    .card p {
+      margin: 0 0 0.9rem;
+      font-size: 0.88rem;
+      color: var(--color-muted);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      background: #ECFDF3;
+      color: var(--color-primary-strong);
+      margin-bottom: 0.4rem;
+    }
+
+    .badge-secondary {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    @media (max-width: 640px) {
+      .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18rem;
+      font-size: 0.8rem;
+    }
+
+    label {
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .hint {
+      font-size: 0.74rem;
+      color: var(--color-muted);
+    }
+
+    input[type="number"],
+    select {
+      border-radius: 999px;
+      border: 1px solid var(--color-border-soft);
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      font-family: inherit;
+      outline: none;
+      background: #F9FAFB;
+      transition: all 0.14s ease-out;
+    }
+
+    input[type="number"]:focus,
+    select:focus {
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.18);
+      background: #FFFFFF;
+    }
+
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    input[type="range"] {
+      flex: 1;
+      accent-color: var(--color-primary);
+    }
+
+    .intensity-label {
+      font-size: 0.75rem;
+      color: var(--color-muted);
+    }
+
+    .btn-full {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0.7rem;
+    }
+
+    .result {
+      border-radius: var(--radius-md);
+      background: #F9FAFB;
+      border: 1px dashed #E5E7EB;
+      padding: 0.65rem 0.75rem;
+      font-size: 0.86rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      min-height: 2.3rem;
+    }
+
+    .result-main {
+      font-weight: 600;
+    }
+
+    .result-highlight {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-primary-strong);
+    }
+
+    .result-secondary {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+    }
+
+    .result-error {
+      color: #B91C1C;
+    }
+
+    .meta-note {
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--color-muted);
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .header-cta {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X791HK4NMY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X791HK4NMY');
+</script>
+
+
+</head>
+
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <img src="logo-viveactivo.png" alt="ViveActivo logo" class="logo-img">
+      </div>
+      <div class="header-cta">
+        <button class="btn btn-ghost" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+          Ver calculadoras
+        </button>
+        <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+          Empezar ahora →
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>
+          No necesitas más tiempo.<br>
+          <span>Necesitas un método sostenible.</span>
+        </h1>
+        <p>
+          La caminata es una base sólida, pero ViveActivo va más allá: combina movimiento diario,
+fuerza sencilla y hábitos claros para ayudar a bajar de peso, mejorar el bienestar y
+despejar la mente sin rutinas extremas.
+
+        </p>
+        <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+          Ver cálculos de caminata →
+        </button>
+        <div class="hero-badges">
+          <span class="badge-pill">⏱ Sesiones sostenibles</span>
+          <span class="badge-pill">🚶‍♂️ Caminatas que cuentan</span>
+          <span class="badge-pill">💪 Añade fuerza cuando sea el momento adecuado</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="hero-card-title">
+          Vista rápida de tu vida activa
+          <span>Ejemplo</span>
+        </div>
+        <div class="hero-card-rows">
+          <div class="hero-row">
+            <div class="hero-row-label">Tiempo disponible</div>
+            <div class="hero-row-value">3 días · 25 min</div>
+          </div>
+          <div class="hero-row">
+            <div class="hero-row-label">Cómo empezás</div>
+            <div class="hero-row-value">Caminatas + algo de fuerza</div>
+          </div>
+          <div class="hero-row">
+            <div class="hero-row-label">Enfoque</div>
+            <div class="hero-row-value">Simple, no fácil</div>
+          </div>
+        </div>
+        <div class="hero-highlight">
+          Se empieza con lo que ya se tiene hoy: caminatas, tiempo y contexto.
+          ViveActivo ayuda a utilizarlos a favor en lugar de ir en contra de ellos.
+        </div>
+      </aside>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="section">
+      <h2 class="section-title">Cómo funciona ViveActivo</h2>
+      <p class="section-sub">
+        No se trata de hacer más, sino de entender mejor: qué hacés, cuánto suma y cómo sostenerlo.
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-title">El punto de partida son las caminatas</div>
+          <p class="step-text">
+            Se mide cuántas calorías se gastan al caminar, con o sin peso adicional. Nada de fórmulas complicadas: datos claros.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-title">Ajustes en pasos pequeños</div>
+          <p class="step-text">
+            Se agregan minutos, recorridos o intensidad según lo que permita la rutina diaria. Pequeños cambios que se sostienen en el tiempo.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-title">Luego se agrega fuerza</div>
+          <p class="step-text">
+            Cuando la base de movimiento ya está presente, es más fácil incorporar bloques cortos de fuerza (25 minutos) sin abandonar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULADORAS DE CAMINATA -->
+    <section id="calculadoras" class="section" aria-label="Calculadoras de caminata">
+      <h2 class="section-title">Calculadoras de caminata</h2>
+      <p class="section-sub">
+        Empezá por algo concreto: medí cuánto gastás caminando. Podés usar la versión
+        simple o la avanzada si caminás con mochila, chaleco con peso u otra carga.
+      </p>
+
+      <div class="calculators-grid">
+        <!-- SIMPLE -->
+        <article id="simple-calculator" class="card" aria-label="Calculadora simple">
+          <span class="badge">Versión simple</span>
+          <h3>Calorías quemadas caminando</h3>
+          <p>
+            Ingresar el peso corporal, el tiempo de caminata y la intensidad. Ideal
+            para estimar el gasto diario sin complicaciones.
+          </p>
+
+          <form id="simpleForm" onsubmit="event.preventDefault(); calculateSimple();">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="simpleWeight">Peso corporal (kg)</label>
+                <input
+                  type="number"
+                  id="simpleWeight"
+                  min="20"
+                  max="300"
+                  step="0.1"
+                  placeholder="Ej: 78"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="simpleMinutes">Tiempo caminando (min)</label>
+                <input
+                  type="number"
+                  id="simpleMinutes"
+                  min="5"
+                  max="600"
+                  step="1"
+                  placeholder="Ej: 30"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="simpleIntensity">Intensidad</label>
+                <select id="simpleIntensity">
+                  <option value="light">Ligera (≈4 km/h)</option>
+                  <option value="moderate" selected>Moderada (≈5 km/h)</option>
+                  <option value="brisk">Rápida (≈6 km/h)</option>
+                </select>
+                <span class="hint">
+                  Seleccione la opción que más se acerque al ritmo habitual.
+                </span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Calcular calorías
+            </button>
+          </form>
+
+          <div id="simpleResult" class="result" aria-live="polite">
+            <div class="result-secondary">
+              Al ingresar los datos, se muestra una estimación.
+            </div>
+          </div>
+
+          <div class="meta-note">
+            Esta es una estimación basada en valores de referencia habituales
+            para caminata ligera, moderada y rápida.
+          </div>
+        </article>
+
+        <!-- AVANZADA -->
+        <article
+          id="advanced-calculator"
+          class="card"
+          aria-label="Calculadora avanzada con peso adicional"
+        >
+          <span class="badge badge-secondary">Versión avanzada</span>
+          <h3>Calorías caminando con peso adicional</h3>
+          <p>
+            Pensada para caminatas con mochila, chaleco con peso, bolso o
+            cualquier carga extra. También tiene en cuenta tu percepción de
+            esfuerzo.
+          </p>
+
+          <form
+            id="advancedForm"
+            onsubmit="event.preventDefault(); calculateAdvanced();"
+          >
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="advWeight">Peso corporal (kg)</label>
+                <input
+                  type="number"
+                  id="advWeight"
+                  min="20"
+                  max="300"
+                  step="0.1"
+                  placeholder="Ej: 78"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="advExtraWeight">Peso adicional (kg)</label>
+                <input
+                  type="number"
+                  id="advExtraWeight"
+                  min="0"
+                  max="60"
+                  step="0.1"
+                  placeholder="Ej: 10"
+                />
+                <span class="hint">
+                  Mochila, chaleco lastrado, bolso, carrito, etc. Si no se llevó peso adicional, dejar el valor en 0.
+                </span>
+              </div>
+
+              <div class="form-field">
+                <label for="advMinutes">Tiempo caminando (min)</label>
+                <input
+                  type="number"
+                  id="advMinutes"
+                  min="5"
+                  max="600"
+                  step="1"
+                  placeholder="Ej: 45"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="advDistance">Distancia (km) <span class="hint">(opcional)</span></label>
+                <input
+                  type="number"
+                  id="advDistance"
+                  min="0"
+                  max="60"
+                  step="0.01"
+                  placeholder="Ej: 4"
+                />
+                <span class="hint">
+                  Si no se conoce la distancia, dejar el campo vacío. Se utilizará una velocidad
+                  promedio de 5 km/h.
+                </span>
+              </div>
+
+              <div class="form-field">
+                <label for="advIncline">Inclinación (%) <span class="hint">(opcional)</span></label>
+                <input
+                  type="number"
+                  id="advIncline"
+                  min="0"
+                  max="25"
+                  step="0.5"
+                  placeholder="Ej: 5"
+                />
+                <span class="hint">
+                  La inclinación real es difícil de medir; si hay dudas, dejarla en
+                  0%.
+                </span>
+              </div>
+
+              <div class="form-field">
+                <label for="advIntensity">Intensidad percibida</label>
+                <div class="slider-row">
+                  <input
+                    type="range"
+                    id="advIntensity"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="3"
+                  />
+                  <span id="advIntensityLabel" class="intensity-label">
+                    3 · Moderada
+                  </span>
+                </div>
+                <span class="hint">
+                  1 = muy suave · 3 = moderada · 5 = muy exigente
+                </span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Calcular calorías
+            </button>
+          </form>
+
+          <div id="advancedResult" class="result" aria-live="polite">
+            <div class="result-secondary">
+              Ingresar el peso corporal, el tiempo y, si se desea, el peso adicional para ver
+              el impacto real de la caminata.
+            </div>
+          </div>
+
+          <div class="meta-note">
+            Esta calculadora se basa en estimaciones habituales de gasto
+            energético para caminata y ajustes aproximados por carga e
+            inclinación. Se recomienda usarla como guía, no como medición clínica.
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PARA QUIÉN ES -->
+    <section class="section">
+      <h2 class="section-title">¿Para quién es ViveActivo?</h2>
+      <div class="cards-grid">
+        <div class="card-simple">
+          <h3>Personas con poco tiempo</h3>
+          <p>
+            Si el día parece no alcanzar pero aun así se busca cuidar el cuerpo,
+            con un enfoque realista y sin promesas exageradas.
+          </p>
+        </div>
+        <div class="card-simple">
+          <h3>Gente real, no atletas</h3>
+          <p>
+            Emprendedores, padres, trabajadores, estudiantes: personas con muchas responsabilidades
+            que necesitan que el entrenamiento se adapte a su vida, no al revés.
+          </p>
+        </div>
+        <div class="card-simple">
+          <h3>Quienes ya se frustraron antes</h3>
+          <p>
+            Si ya se han probado rutinas imposibles, dietas extremas o planes que no se sostienen,
+            aquí el foco está en construir un hábito sostenible.
+          </p>
+        </div>
+       <div class="card-simple">
+    <h3>Calculadora de calorías por porciones</h3>
+    <p>Estimá tus calorías del día usando porciones reales: puño, vaso, plato, cucharada.</p>
+    <a href="calcular-calorias.html" class="btn btn-primary btn-full">Calcular mis calorías</a>
+  </div>
+
+</div>
+      </div>
+    </section>
+
+    <!-- NOTAS Y GUÍAS -->
+    <section id="notas" class="section">
+      <h2 class="section-title">Notas y guías</h2>
+      <p class="section-sub">
+        Aquí se agrupan artículos con explicaciones sencillas sobre caminata, gasto calórico
+        y movimiento diario. Cada guía se conecta con las herramientas de ViveActivo para
+        que sea más fácil pasar de la teoría a la acción.
+      </p>
+
+      <div class="cards-grid">
+        <!-- Nota 1 -->
+        <article class="card-simple">
+          <h3>¿Cuántas calorías se queman al caminar?</h3>
+          <p>
+            Explicación clara de cómo influyen el peso corporal, el tiempo, la velocidad
+            y la carga adicional en el gasto calórico de la caminata.
+          </p>
+          <p>
+            <a href="#calorias-caminando">Leer guía completa →</a>
+          </p>
+        </article>
+       <article class="card-simple">
+        <h3>Caminar para despejar la mente</h3>
+         <p>
+          Cómo usar la caminata como una pausa consciente para reducir el estrés, ordenar
+          ideas y recuperar claridad sin necesidad de técnicas complicadas.
+          </p>
+         <p>
+        <a href="#caminar-para-despejar-la-mente">Leer guía completa →</a>
+      </p>
+    </article>
+     <article class="card-simple">
+  <h3>Déficit calórico: la guía simple y definitiva</h3>
+  <p>
+    Qué es realmente el déficit calórico, cómo se crea sin dietas extremas y cómo mantenerlo sin pasar hambre.
+  </p>
+  <p>
+    <a href="#deficit-calorico">Leer guía completa →</a>
+  </p>
+</article>
+
+
+        <!-- Cuando haya nuevas notas, se agregan más artículos aquí -->
+        <!--
+        <article class="card-simple">
+          <h3>Título de la siguiente nota</h3>
+          <p>Resumen breve de lo que explica la guía.</p>
+          <p><a href="#id-de-la-nota">Leer guía completa →</a></p>
+        </article>
+        -->
+      </div>
+    </section>
+      <article class="card-simple">
+  <h3>Rucking: caminar con peso para quemar más energía</h3>
+  <p>
+    En qué consiste el rucking, cómo empezar de forma segura y cómo usarlo como
+    herramienta extra para aumentar el gasto calórico sin necesidad de correr.
+  </p>
+  <p>
+    <a href="#rucking">Leer guía completa →</a>
+  </p>
+</article>
+
+     <!-- POR QUÉ EXISTE -->
+    <!-- ARTÍCULO: ¿Cuántas calorías se queman al caminar? -->
+    <section id="calorias-caminando" class="section">
+      <h2 class="section-title">¿Cuántas calorías se queman al caminar?</h2>
+      <p class="section-sub">
+        La cantidad de calorías que se queman caminando depende principalmente del peso corporal,
+        la duración de la caminata y la intensidad o velocidad. En promedio, una persona puede
+        quemar entre 180 y 280 calorías por hora de caminata moderada, pero lo ideal es calcularlo
+        de forma más precisa según cada caso.
+      </p>
+
+      <div class="cards-grid">
+        <article class="card-simple">
+          <h3>Valores de referencia generales</h3>
+          <p>
+            De forma aproximada, una caminata moderada puede generar el siguiente gasto calórico
+            en una hora:
+          </p>
+          <ul class="list">
+            <li>50 kg: 160 a 190 kcal por hora.</li>
+            <li>60 kg: 180 a 220 kcal por hora.</li>
+            <li>70 kg: 220 a 260 kcal por hora.</li>
+            <li>80 kg: 260 a 300 kcal por hora.</li>
+            <li>90 kg: 300 a 340 kcal por hora.</li>
+          </ul>
+          <p>
+            Estos valores son orientativos. Factores como la edad, el terreno, la condición
+            física y la postura pueden modificar el resultado real.
+          </p>
+        </article>
+
+        <article class="card-simple">
+          <h3>Influencias principales en el gasto calórico</h3>
+          <p>
+            El gasto energético al caminar aumenta o disminuye en función de varios elementos:
+          </p>
+          <ul class="list">
+            <li><strong>Peso corporal:</strong> a mayor peso, mayor gasto calórico.</li>
+            <li><strong>Velocidad:</strong> caminar rápido incrementa de forma notable el consumo de energía.</li>
+            <li><strong>Terreno:</strong> subidas, pendientes o superficies irregulares exigen más esfuerzo.</li>
+            <li><strong>Duración:</strong> a más minutos de caminata, mayor suma total de calorías.</li>
+            <li><strong>Carga adicional:</strong> caminar con mochila o peso extra (rucking) puede aumentar el gasto entre un 20% y un 50%.</li>
+          </ul>
+        </article>
+
+        <article class="card-simple">
+          <h3>Usar la calculadora para un dato más preciso</h3>
+          <p>
+            Las tablas y valores generales son útiles para tener una idea rápida, pero si se busca
+            una estimación más ajustada a la realidad, es recomendable utilizar una herramienta
+            específica.
+          </p>
+          <p>
+            En ViveActivo se puede calcular el gasto calórico estimado a partir de:
+          </p>
+          <ul class="list">
+            <li>Peso corporal.</li>
+            <li>Tiempo de caminata.</li>
+            <li>Intensidad o percepción de esfuerzo.</li>
+            <li>Opcional: peso adicional y distancia aproximada.</li>
+          </ul>
+          <p>
+            <a href="#calculadoras">Ir a las calculadoras de caminata</a>
+          </p>
+        </article>
+      </div>
+
+      <p class="section-sub" style="margin-top: 1rem;">
+        La caminata es una forma sencilla y accesible de aumentar el gasto calórico diario. No requiere
+        equipamiento especial, es de bajo impacto y se adapta a distintos niveles de condición física.
+        La clave está en la constancia y en entender qué aporta cada sesión dentro del objetivo general.
+      </p>
+    </section>
+<!-- ARTÍCULO: Caminar para despejar la mente -->
+<section id="caminar-para-despejar-la-mente" class="section">
+  <h2 class="section-title">Caminar para despejar la mente</h2>
+  <p class="section-sub">
+    Además de ayudar con el gasto calórico, la caminata puede funcionar como una
+    herramienta sencilla para reducir el estrés, ordenar pensamientos y recuperar
+    una sensación de calma. No requiere técnica avanzada ni preparación especial:
+    se trata de caminar con un poco más de intención.
+  </p>
+
+  <div class="cards-grid">
+    <article class="card-simple">
+      <h3>Beneficios mentales de la caminata</h3>
+      <p>
+        Caminar de forma regular puede aportar varios efectos positivos a nivel mental:
+      </p>
+      <ul class="list">
+        <li>Disminución de la tensión acumulada durante el día.</li>
+        <li>Mejora del estado de ánimo gracias al movimiento y al entorno.</li>
+        <li>Espacio para pensar sin interrupciones constantes.</li>
+        <li>Sensación de logro simple: salir, caminar y volver.</li>
+      </ul>
+      <p>
+        No reemplaza un tratamiento profesional cuando es necesario, pero sí puede
+        ser un apoyo concreto en la vida diaria.
+      </p>
+    </article>
+
+    <article class="card-simple">
+      <h3>Cómo usar la caminata como pausa mental</h3>
+      <p>
+        No es indispensable contar pasos ni tiempos exactos para que la caminata
+        ayude a despejar la mente. Algunas ideas prácticas:
+      </p>
+      <ul class="list">
+        <li>Elegir un recorrido sencillo y seguro que se conozca de memoria.</li>
+        <li>Dejar el teléfono en silencio o en modo avión durante unos minutos.</li>
+        <li>Prestar atención al ritmo de los pasos y a la respiración.</li>
+        <li>Permitir que las ideas aparezcan sin necesidad de resolver todo al instante.</li>
+      </ul>
+      <p>
+        Estas caminatas pueden durar 10, 20 o 30 minutos. Lo importante es que
+        se conviertan en un espacio fijo en la rutina.
+      </p>
+    </article>
+
+    <article class="card-simple">
+      <h3>Combinar mente y cuerpo en ViveActivo</h3>
+      <p>
+        En ViveActivo, la caminata se integra con otras piezas del bienestar:
+        algo de fuerza, descanso adecuado y claridad en la alimentación.
+      </p>
+      <p>
+        Utilizar la caminata como momento para despejar la mente puede hacer que
+        sea más sencillo sostener otros cambios, como organizar mejor las comidas
+        o respetar horarios de sueño.
+      </p>
+      <p>
+        <a href="#calculadoras">Usar las calculadoras de caminata</a> para
+        tener una referencia del gasto calórico, y al mismo tiempo mantener
+        el enfoque en cómo se siente cada salida, no solo en los números.
+      </p>
+    </article>
+  </div>
+
+  <p class="section-sub" style="margin-top: 1rem;">
+    Convertir la caminata en una pausa para la mente no requiere rituales
+    complejos. Basta con reservar un tramo del día para salir, moverse y
+    crear un pequeño espacio propio. A partir de allí, se vuelve más fácil
+    tomar mejores decisiones para el cuerpo y para la vida diaria.
+  </p>
+</section>
+<!-- ARTÍCULO: Déficit calórico -->
+<section id="deficit-calorico" class="section">
+  <h2 class="section-title">Déficit calórico: la guía simple y definitiva</h2>
+
+  <p class="section-sub">
+    El déficit calórico es el pilar más importante para bajar de peso. No importa el plan, la dieta o el ejercicio: si no existe déficit, no hay pérdida de grasa. Y lo mejor es que se puede lograr de manera simple, sin dietas estrictas ni entrenamientos agotadores.
+
+Para profundizar, podés leer la 
+  <a href="deficit-calorico.html">guía completa de déficit calórico</a>, hecha para personas reales.
+  </p>
+
+  <div class="cards-grid">
+
+    <article class="card-simple">
+      <h3>¿Qué es el déficit calórico?</h3>
+      <p>
+        Es la diferencia entre lo que tu cuerpo gasta y lo que consumís. Si gastás más energía de la que ingresás, usás tus reservas (grasa) para compensar.
+      </p>
+
+      <ul class="list">
+        <li><strong>Gasto energético:</strong> pasos, caminata, fuerza, digestión, metabolismo basal.</li>
+        <li><strong>Ingesta energética:</strong> todo lo que comés y bebés.</li>
+      </ul>
+
+      <p>
+        No es magia. Es fisiología. Pero el truco está en hacerlo sostenible.
+      </p>
+    </article>
+
+    <article class="card-simple">
+      <h3>Cómo crear un déficit sin pasar hambre</h3>
+      <p>Los métodos extremos fallan porque no son sostenibles. En ViveActivo priorizamos lo contrario: que puedas sostenerlo sin sufrir.</p>
+
+      <ul class="list">
+        <li><strong>Elegir alimentos de alta saciedad:</strong> carnes magras, huevos, frutas, verduras, legumbres.</li>
+        <li><strong>Aumentar el movimiento diario:</strong> pasos, pequeñas caminatas, rucking suave.</li>
+        <li><strong>Entrenamiento de fuerza:</strong> poco volumen, pero constante.</li>
+        <li><strong>Descanso adecuado:</strong> dormir 7–8 horas mejora el control del apetito.</li>
+      </ul>
+
+      <p>
+        La clave: <strong>sentir menos hambre</strong>, no “tener más fuerza de voluntad”.
+      </p>
+    </article>
+
+    <article class="card-simple">
+      <h3>Cómo saber tu déficit real</h3>
+      <p>La forma más precisa es observar tendencias, no números exactos.</p>
+      <ul class="list">
+        <li><strong>Si el peso baja en 2 a 3 semanas:</strong> estás en déficit.</li>
+        <li><strong>Si se estanca:</strong> estás en mantenimiento (que no es malo).</li>
+        <li><strong>Si sube:</strong> estás en superávit.</li>
+      </ul>
+
+      <p>
+        Nuestra herramienta de cálculo (próximamente) te dará una estimación personalizada basada en tus datos reales.
+      </p>
+
+      <p>
+        Para acelerar el déficit sin sufrir, probá sumar <a href="#rucking">rucking suave</a> o la caminata sostenida diaria.
+
+      </p>
+    </article>
+
+  </div>
+
+  <p class="section-sub" style="margin-top: 1rem;">
+    El déficit calórico no tiene por qué sentirse como una lucha. Cuando combinás movimiento sostenible, fuerza simple y alimentación de saciedad, el proceso se vuelve natural y predecible. Y eso es lo que buscamos en ViveActivo: un método que puedas mantener años, no semanas.
+  </p>
+</section>
+<!-- ARTÍCULO: Rucking -->
+<section id="rucking" class="section">
+  <h2 class="section-title">Rucking: caminar con peso para quemar más energía</h2>
+
+  <p class="section-sub">
+    El rucking es una forma simple de aumentar el gasto calórico: se trata de caminar
+    llevando peso adicional, normalmente en una mochila. No es correr, no es una
+    marcha militar obligatoria; es una herramienta que puede adaptarse a casi cualquier
+    nivel si se usa con criterio.
+  </p>
+
+  <div class="cards-grid">
+
+    <article class="card-simple">
+      <h3>¿Qué es exactamente el rucking?</h3>
+      <p>
+        En términos simples, es caminar con una mochila con peso. Ese peso extra hace
+        que el cuerpo gaste más energía para realizar el mismo movimiento.
+      </p>
+      <ul class="list">
+        <li><strong>No requiere equipamiento especial:</strong> una mochila resistente y peso estable.</li>
+        <li><strong>No exige correr:</strong> el ritmo suele ser el de una caminata rápida.</li>
+        <li><strong>Es progresivo:</strong> se puede empezar con poco peso e ir subiendo con el tiempo.</li>
+      </ul>
+      <p>
+        Es una forma accesible de sumar “intensidad inteligente” a la caminata sin
+        entrar en entrenamientos extremos.
+      </p>
+    </article>
+
+    <article class="card-simple">
+      <h3>Cómo empezar con rucking de forma segura</h3>
+      <p>
+        No hace falta cargar mucho peso desde el primer día. De hecho, es mejor
+        arrancar liviano y escuchar al cuerpo.
+      </p>
+      <ul class="list">
+        <li><strong>Peso inicial sugerido:</strong> entre el 5% y el 10% del peso corporal.</li>
+        <li><strong>Superficie:</strong> terreno plano y conocido, como veredas o parques.</li>
+        <li><strong>Postura:</strong> ajustar bien las correas de la mochila para que el peso quede cerca del cuerpo.</li>
+        <li><strong>Duración:</strong> 15–20 minutos al principio, 1 a 3 veces por semana.</li>
+      </ul>
+      <p>
+        Si aparecen molestias en rodillas, espalda o tobillos, conviene reducir peso,
+        tiempo o ambas cosas.
+      </p>
+    </article>
+
+    <article class="card-simple">
+      <h3>Cómo encaja el rucking en ViveActivo</h3>
+      <p>
+        En ViveActivo, el rucking es una herramienta opcional para quienes ya se sienten
+        cómodos con la caminata y quieren un poco más de intensidad sin correr.
+      </p>
+      <ul class="list">
+        <li>Se puede usar 1 o 2 veces por semana como “sesión fuerte”.</li>
+        <li>Ayuda a aumentar el gasto calórico sin necesidad de agregar más días de entrenamiento.</li>
+        <li>Trabaja piernas, glúteos y zona media de forma natural.</li>
+      </ul>
+      <p>
+        <a href="#calculadoras">Usar las calculadoras de caminata</a> sirve como referencia del gasto
+        energético; el rucking suma un extra que, a futuro, también se puede estimar en nuevas herramientas.
+      </p>
+    </article>
+
+  </div>
+
+  <p class="section-sub" style="margin-top: 1rem;">
+    El rucking no es obligatorio ni mágico, pero puede ser una pieza muy útil dentro de
+    un plan de movimiento realista. Combinado con caminatas suaves, algo de fuerza y un
+    déficit calórico razonable, ayuda a acelerar el proceso sin convertir la vida diaria
+    en una rutina de entrenamiento extremo.
+  </p>
+</section>
+
+
+    <section class="section">
+      <h2 class="section-title">Por qué existe ViveActivo</h2>
+      <p class="section-sub">
+  ViveActivo nace de una idea simple: muchas personas intentan planes exigentes que no se
+  adaptan a su vida diaria y terminan abandonando. La propuesta es construir un método
+  sostenible que combine caminatas, fuerza accesible, descanso y claridad en la alimentación,
+  con un enfoque realista para el cuerpo y también para la mente.
+</p>
+      <ul class="list">
+        <li>Porque no todos pueden entrenar 6 veces por semana.</li>
+        <li>Porque la culpa y el “todo o nada” no sirven a largo plazo.</li>
+        <li>Porque moverte un poco, de forma consistente, cambia tu cabeza y tu vida.</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© <span id="year"></span> ViveActivo. Todos los derechos reservados.</span>
+      <span>Contacto: <a href="mailto:contacto@viveactivo.com">contacto@viveactivo.com</a></span>
+    </footer>
+  </div>
+
+  <script>
+    // Año dinámico en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Utilidad: redondear a una cantidad de decimales
+    function round(value, decimals) {
+      const factor = Math.pow(10, decimals);
+      return Math.round(value * factor) / factor;
+    }
+
+    // Intensidad percibida: actualizar etiqueta del slider
+    const advIntensityInput = document.getElementById("advIntensity");
+    const advIntensityLabel = document.getElementById("advIntensityLabel");
+
+    const intensityText = {
+      1: "1 · Muy suave",
+      2: "2 · Suave",
+      3: "3 · Moderada",
+      4: "4 · Intensa",
+      5: "5 · Muy exigente",
+    };
+
+    if (advIntensityInput) {
+      advIntensityInput.addEventListener("input", () => {
+        advIntensityLabel.textContent =
+          intensityText[advIntensityInput.value] || advIntensityInput.value;
+      });
+    }
+
+    // CALCULADORA SIMPLE
+    function calculateSimple() {
+      const weight = parseFloat(
+        document.getElementById("simpleWeight").value
+      );
+      const minutes = parseFloat(
+        document.getElementById("simpleMinutes").value
+      );
+      const intensity = document.getElementById("simpleIntensity").value;
+      const resultDiv = document.getElementById("simpleResult");
+
+      if (!weight || !minutes || weight <= 0 || minutes <= 0) {
+        resultDiv.innerHTML =
+          '<span class="result-error">Por favor, completá tu peso y el tiempo de caminata con valores válidos.</span>';
+        return;
+      }
+
+      // MET aproximados según literatura para caminata
+      let met;
+      if (intensity === "light") {
+        met = 3.0; // caminata ligera
+      } else if (intensity === "moderate") {
+        met = 3.8; // moderada
+      } else {
+        met = 4.5; // rápida
+      }
+
+      // Fórmula clásica: kcal = MET * 3.5 * peso(kg) / 200 * tiempo(min)
+      const calories = met * 3.5 * weight / 200 * minutes;
+
+      resultDiv.innerHTML = `
+        <div class="result-main">
+          Estimación de gasto:
+          <span class="result-highlight">${round(calories, 1)} kcal</span>
+        </div>
+        <div class="result-secondary">
+          Basado en una caminata de ${minutes} min para una persona de ${round(
+        weight,
+        1
+      )} kg con intensidad ${
+        intensity === "light"
+          ? "ligera"
+          : intensity === "moderate"
+          ? "moderada"
+          : "rápida"
+      }.
+        </div>
+      `;
+    }
+
+    // Obtener MET base según velocidad (si se conoce) o intensidad percibida
+    function getBaseMet(speedKmh, intensityLevel) {
+      let baseMet;
+
+      if (speedKmh && speedKmh > 0) {
+        if (speedKmh < 3) baseMet = 2.5;
+        else if (speedKmh < 4) baseMet = 3.0;
+        else if (speedKmh < 5) baseMet = 3.5;
+        else if (speedKmh < 6) baseMet = 4.3;
+        else baseMet = 5.0;
+      } else {
+        // Sin velocidad, usamos intensidad percibida
+        const lvl = intensityLevel || 3;
+        if (lvl <= 1) baseMet = 2.5;
+        else if (lvl === 2) baseMet = 3.0;
+        else if (lvl === 3) baseMet = 3.5;
+        else if (lvl === 4) baseMet = 4.3;
+        else baseMet = 5.0;
+      }
+
+      return baseMet;
+    }
+
+    function calculateAdvanced() {
+      const weight = parseFloat(
+        document.getElementById("advWeight").value
+      );
+      const extraWeight =
+        parseFloat(document.getElementById("advExtraWeight").value) || 0;
+      const minutes = parseFloat(
+        document.getElementById("advMinutes").value
+      );
+      const distance =
+        parseFloat(document.getElementById("advDistance").value) || null;
+      const incline =
+        parseFloat(document.getElementById("advIncline").value) || 0;
+      const intensityLevel = parseInt(
+        document.getElementById("advIntensity").value,
+        10
+      );
+      const resultDiv = document.getElementById("advancedResult");
+
+      if (!weight || !minutes || weight <= 0 || minutes <= 0) {
+        resultDiv.innerHTML =
+          '<span class="result-error">Complete al menos el peso corporal y el tiempo de caminata con valores válidos.</span>';
+        return;
+      }
+
+      // Velocidad aproximada
+      let speedKmh = null;
+      if (distance && distance > 0) {
+        const hours = minutes / 60;
+        if (hours > 0) {
+          speedKmh = distance / hours;
+        }
+      } else {
+        // Si no hay distancia, usamos 5 km/h como promedio
+        speedKmh = 5;
+      }
+
+      // MET base según velocidad / intensidad
+      let baseMet = getBaseMet(speedKmh, intensityLevel);
+
+      // Ajuste por inclinación (muy simplificado):
+      // Añadimos ~0.5 MET cada 5% de inclinación.
+      let inclineMet = 0;
+      if (incline > 0) {
+        inclineMet = (incline / 5) * 0.5;
+      }
+
+      let metNoLoad = baseMet + inclineMet;
+
+      // Aseguramos límites razonables
+      if (metNoLoad < 2) metNoLoad = 2;
+      if (metNoLoad > 10) metNoLoad = 10;
+
+      // Ajuste por peso adicional:
+      // Aproximación: +8% de gasto por cada 10% de peso extra relativo al cuerpo.
+      let loadFactor = 1;
+      if (extraWeight > 0) {
+        const ratio = extraWeight / weight;
+        loadFactor = 1 + ratio * 0.8;
+      }
+
+      const metWithLoad = metNoLoad * loadFactor;
+
+      // Cálculo de calorías
+      const kcalNoLoad = metNoLoad * 3.5 * weight / 200 * minutes;
+      const kcalWithLoad = metWithLoad * 3.5 * weight / 200 * minutes;
+
+      const diffKcal = kcalWithLoad - kcalNoLoad;
+      const diffPercent = kcalNoLoad > 0 ? (diffKcal / kcalNoLoad) * 100 : 0;
+
+      const parts = [];
+
+      parts.push(`
+        <div class="result-main">
+          Con carga: <span class="result-highlight">${round(
+            kcalWithLoad,
+            1
+          )} kcal</span>
+        </div>
+        <div class="result-secondary">
+          Sin peso adicional serían aproximadamente ${round(
+            kcalNoLoad,
+            1
+          )} kcal. La carga que llevaste agrega alrededor de ${round(
+        diffPercent,
+        1
+      )}% más de gasto.
+        </div>
+      `);
+
+      if (distance && distance > 0 && speedKmh) {
+        parts.push(
+          `<div class="result-secondary">Velocidad estimada: ${round(
+            speedKmh,
+            2
+          )} km/h en ${round(distance, 2)} km.</div>`
+        );
+      }
+
+      if (extraWeight > 0) {
+        parts.push(
+          `<div class="result-secondary">Estás sumando ${round(
+            extraWeight,
+            1
+          )} kg de carga sobre ${round(
+            weight,
+            1
+          )} kg de peso corporal. Es una forma simple, pero no fácil, de aumentar el esfuerzo.</div>`
+        );
+      }
+
+      resultDiv.innerHTML = parts.join("");
+    }
+  </script>
+</body>
+</html>
