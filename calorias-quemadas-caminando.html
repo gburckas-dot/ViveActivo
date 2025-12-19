@@ -10,226 +10,17 @@
 
   <link rel="canonical" href="https://gburckas-dot.github.io/ViveActivo/calorias-quemadas-caminando.html" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Cuántas calorías quemo caminando | ViveActivo" />
   <meta property="og:description" content="Calculá una estimación en segundos y entendé qué influye en el gasto calórico al caminar." />
   <meta property="og:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
   <meta property="og:url" content="https://gburckas-dot.github.io/ViveActivo/calorias-quemadas-caminando.html" />
 
-  <!-- Tipografía -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 
-  <style>
-    :root {
-      --color-bg: #F9FAFB;
-      --color-bg-soft: #FFFFFF;
-      --color-primary: #10B981;
-      --color-primary-soft: #D1FAE5;
-      --color-primary-strong: #059669;
-      --color-text: #111827;
-      --color-muted: #6B7280;
-      --color-border-soft: #E5E7EB;
-      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
-      --shadow-subtle: 0 4px 12px rgba(15, 23, 42, 0.06);
-      --radius-lg: 18px;
-      --radius-md: 12px;
-      --max-width: 1080px;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top left, #ECFEFF 0, #F9FAFB 40%, #FFFFFF 100%);
-      color: var(--color-text);
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 24px 16px 52px;
-    }
-
-    /* Header similar al index */
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 22px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-img {
-      height: 110px;
-      width: auto;
-      display: block;
-    }
-
-    .header-cta {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      border-radius: 999px;
-      padding: 10px 18px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.1s ease, border-color 0.1s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: var(--color-primary);
-      color: white;
-      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 16px 30px rgba(16, 185, 129, 0.4);
-      background: var(--color-primary-strong);
-    }
-
-    .btn-ghost {
-      background: transparent;
-      border: 1px solid var(--color-primary-soft);
-      color: var(--color-muted);
-    }
-
-    .btn-ghost:hover {
-      background: var(--color-primary-soft);
-      color: var(--color-text);
-    }
-
-    /* Content */
-    .content {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .hero {
-      background: var(--color-bg-soft);
-      border-radius: 24px;
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(15, 23, 42, 0.04);
-      margin-bottom: 18px;
-    }
-
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(209, 250, 229, 0.9);
-      color: var(--color-primary-strong);
-      padding: 0.25rem 0.8rem;
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 3.6vw, 2.5rem);
-      line-height: 1.1;
-      margin-bottom: 10px;
-    }
-
-    .lead {
-      font-size: 0.98rem;
-      color: var(--color-muted);
-      margin-bottom: 14px;
-      max-width: 60ch;
-    }
-
-    .cta-box {
-      margin-top: 10px;
-      padding: 12px 12px;
-      border-radius: 14px;
-      background: var(--color-primary-soft);
-      color: #065F46;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .cta-box strong { font-weight: 600; }
-
-    .section {
-      margin-top: 18px;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-    }
-
-    .card {
-      background: var(--color-bg-soft);
-      border-radius: var(--radius-lg);
-      padding: 14px 14px 12px;
-      border: 1px solid rgba(15, 23, 42, 0.04);
-      box-shadow: var(--shadow-subtle);
-      margin-bottom: 12px;
-    }
-
-    .card p {
-      color: var(--color-muted);
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-
-    .list {
-      padding-left: 18px;
-      color: var(--color-muted);
-      font-size: 0.9rem;
-    }
-
-    .list li { margin-bottom: 6px; }
-
-    .footer {
-      margin-top: 26px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
-      font-size: 0.78rem;
-      color: var(--color-muted);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .header { flex-direction: column; align-items: flex-start; }
-      .logo-img { height: 90px; }
-      .cta-box { justify-content: flex-start; }
-    }
-  </style>
-
-  <!-- Google tag (gtag.js) - usa tu ID que ya funciona -->
+  <!-- GA4 (tu ID que funciona) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X791HK4NMY"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -243,20 +34,19 @@
   <div class="page">
 
     <header class="header">
-      <div class="logo">
-        <a href="index.html" aria-label="Volver a ViveActivo">
-          <img src="logo-viveactivo.png" alt="ViveActivo logo" class="logo-img">
-        </a>
-      </div>
-
+      <a href="index.html" aria-label="Volver a ViveActivo">
+        <img src="logo-viveactivo.png" alt="ViveActivo logo" class="logo-img">
+      </a>
       <div class="header-cta">
-        <a class="btn btn-ghost" href="index.html#calculadoras">Ver calculadoras</a>
+        <a class="btn btn-ghost" href="index.html#notas">Notas</a>
+        <a class="btn btn-ghost" href="index.html#calculadoras">Calculadoras</a>
         <a class="btn btn-primary" href="index.html#calculadoras">Calcular ahora →</a>
       </div>
     </header>
 
     <main class="content">
-      <section class="hero">
+
+      <section class="card">
         <div class="pill">🚶‍♂️ Guía rápida + herramienta</div>
 
         <h1>Cuántas calorías quemo caminando</h1>
@@ -269,7 +59,7 @@
         <div class="cta-box">
           <div>
             <strong>Calculá tu gasto calórico en segundos</strong><br>
-            <span style="color:#065F46; font-size:0.88rem;">Peso + minutos + intensidad (simple o avanzada)</span>
+            <span style="font-size:0.88rem;">Peso + minutos + intensidad (simple o avanzada)</span>
           </div>
           <a class="btn btn-primary" href="index.html#calculadoras">Ir a la calculadora →</a>
         </div>
@@ -278,7 +68,6 @@
       <section class="section">
         <h2 class="section-title">Qué factores influyen en las calorías quemadas</h2>
         <div class="card">
-          <p>El gasto calórico al caminar cambia según estos factores principales:</p>
           <ul class="list">
             <li><strong>Peso corporal:</strong> a mayor peso, mayor gasto.</li>
             <li><strong>Duración:</strong> más minutos = más calorías totales.</li>
@@ -292,15 +81,12 @@
       <section class="section">
         <h2 class="section-title">Ejemplos orientativos</h2>
         <div class="card">
-          <p>
-            Como referencia general (caminata moderada), una hora puede generar aproximadamente:
-          </p>
           <ul class="list">
-            <li>70 kg: ~200–250 kcal</li>
-            <li>80 kg: ~250–300 kcal</li>
-            <li>90 kg: ~300–350 kcal</li>
+            <li>70 kg (moderada): ~200–250 kcal por hora</li>
+            <li>80 kg (moderada): ~250–300 kcal por hora</li>
+            <li>90 kg (moderada): ~300–350 kcal por hora</li>
           </ul>
-          <p>
+          <p style="margin-top:10px;color:var(--color-muted);font-size:.95rem;">
             Son valores aproximados. Para tu caso, usá la calculadora y quedate con una cifra práctica.
           </p>
         </div>
@@ -309,16 +95,12 @@
       <section class="section">
         <h2 class="section-title">Cómo usar esto para bajar de peso</h2>
         <div class="card">
-          <p>
-            Caminar suma gasto energético y ayuda a crear déficit calórico sin exigir entrenamientos extremos.
-            La idea no es “hacer más”, sino sostener lo que podés.
-          </p>
           <ul class="list">
             <li>Base: caminatas consistentes.</li>
             <li>Alimentación simple: apuntar a déficit sin pasar hambre.</li>
             <li>Más adelante: <strong>fuerza mínima necesaria</strong> (poco volumen, bien hecho).</li>
           </ul>
-          <p style="margin-top:10px;">
+          <p style="margin-top:10px;color:var(--color-text);font-size:.95rem;">
             <strong>No más es mejor.</strong> Lo sostenible es lo que funciona.
           </p>
         </div>
@@ -328,8 +110,8 @@
         <span>© <span id="year"></span> ViveActivo.</span>
         <span><a href="index.html">Volver a la página principal</a></span>
       </footer>
-    </main>
 
+    </main>
   </div>
 
   <script>
@@ -337,3 +119,4 @@
   </script>
 </body>
 </html>
+
