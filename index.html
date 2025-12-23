@@ -2,12 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>ViveActivo – Entrená en menos tiempo</title>
+  <title>ViveActivo – Pequeños pasos, grandes cambios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO base -->
   <meta
     name="description"
-    content="ViveActivo te da herramientas simples para entrenar en menos tiempo y entender tu gasto calórico caminando, con foco en hábitos sostenibles para gente real."
+    content="ViveActivo es un método simple y sostenible para mejorar tu salud. Pequeños pasos, grandes cambios: caminata, déficit calórico, rucking y hábitos que podés sostener en la vida real."
   />
+  <meta
+    name="keywords"
+    content="déficit calórico, caminata, rucking, bajar de peso caminando, salud simple, bienestar sostenible, hábitos saludables, perder grasa, método fácil de salud, guía para caminar, entrenamiento minimalista"
+  />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://gburckas-dot.github.io/ViveActivo/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ViveActivo – Pequeños pasos, grandes cambios" />
+  <meta property="og:description" content="Bienestar simple, caminata, déficit calórico, rucking y hábitos que podés sostener en la vida real. Pequeños pasos, grandes cambios." />
+  <meta property="og:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
+  <meta property="og:url" content="https://gburckas-dot.github.io/ViveActivo/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ViveActivo – Pequeños pasos, grandes cambios" />
+  <meta name="twitter:description" content="Bienestar simple, caminata, déficit calórico, rucking y hábitos sostenibles. Mejorá tu vida un paso a la vez." />
+  <meta name="twitter:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
 
   <!-- Tipografía de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,6 +90,18 @@
       display: flex;
       align-items: center;
       gap: 10px;
+    }
+
+    .logo-img {
+      height: 140px;
+      width: auto;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .logo-img {
+        height: 96px;
+      }
     }
 
     .logo-icon {
@@ -331,7 +364,7 @@
       margin-bottom: 4px;
     }
 
-    /* CALCULADORAS DE CAMINATA (adaptado del index anterior) */
+    /* CALCULADORAS DE CAMINATA */
 
     .calculators-grid {
       display: grid;
@@ -522,50 +555,65 @@
       }
     }
   </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X791HK4NMY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X791HK4NMY');
+</script>
+
+
 </head>
+
 <body>
   <div class="page">
     <!-- HEADER -->
     <header class="header">
-      <div class="logo">
-        <span class="logo-icon">🚶‍♂️</span>
-        <div class="logo-text">
-           <div class="logo-main">Vive<span>Activo</span></div>
-           <div class="logo-sub">Pequeños pasos, cambios grandes.</div>
-         </div>
+  <div class="logo">
+    <img src="logo-viveactivo.png" alt="ViveActivo logo" class="logo-img">
+  </div>
+  <div class="header-cta">
+  <button class="btn btn-ghost" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+    Calculadoras
+  </button>
 
-      </div>
-      <div class="header-cta">
-        <button class="btn btn-ghost" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
-          Ver calculadoras
-        </button>
-        <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
-          Empezar ahora →
-        </button>
-      </div>
-    </header>
+  <button class="btn btn-ghost" onclick="document.getElementById('notas').scrollIntoView({behavior:'smooth'})">
+    Guías
+  </button>
+
+  <a class="btn btn-primary" href="calcular-calorias.html">
+    Porciones →
+  </a>
+</div>
+</header>
+
 
     <!-- HERO -->
     <section class="hero">
-     <div class="hero-text">
-  <h1>
-    No necesitás más tiempo.<br>
-    <span>Necesitás un método sostenible.</span>
-  </h1>
-  <p>
-    La caminata es el puente entre tu vida real y los resultados que querés.
-    Una herramienta accesible y poderosa para mejorar tu bienestar, estés
-    empezando, retomando o ya entrenes hace años.
-  </p>
-  <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
-    Ver cálculos de caminata →
-  </button>
-  <div class="hero-badges">
-    <span class="badge-pill">⏱ Sesiones sostenibles</span>
-    <span class="badge-pill">🚶‍♂️ Caminatas que cuentan</span>
-    <span class="badge-pill">💪 Sumá fuerza cuando estés listo</span>
-  </div>
-</div>
+      <div class="hero-text">
+        <h1>
+          No necesitas más tiempo.<br>
+          <span>Necesitas un método sostenible.</span>
+        </h1>
+        <p>
+          La caminata es una base sólida, pero ViveActivo va más allá: combina movimiento diario,
+fuerza sencilla y hábitos claros para ayudar a bajar de peso, mejorar el bienestar y
+despejar la mente sin rutinas extremas.
+
+        </p>
+        <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+          Ver cálculos de caminata →
+        </button>
+        <div class="hero-badges">
+          <span class="badge-pill">⏱ Sesiones sostenibles</span>
+          <span class="badge-pill">🚶‍♂️ Caminatas que cuentan</span>
+          <span class="badge-pill">💪 Añade fuerza cuando sea el momento adecuado</span>
+        </div>
+      </div>
 
       <aside class="hero-card">
         <div class="hero-card-title">
@@ -587,8 +635,8 @@
           </div>
         </div>
         <div class="hero-highlight">
-          Empezás con lo que tenés hoy: tus caminatas, tus tiempos, tu contexto.
-          ViveActivo te ayuda a usarlos a favor en lugar de pelear contra ellos.
+          Se empieza con lo que ya se tiene hoy: caminatas, tiempo y contexto.
+          ViveActivo ayuda a utilizarlos a favor en lugar de ir en contra de ellos.
         </div>
       </aside>
     </section>
@@ -597,30 +645,29 @@
     <section class="section">
       <h2 class="section-title">Cómo funciona ViveActivo</h2>
       <p class="section-sub">
-  No se trata de hacer más, sino de entender mejor: qué hacés, cuánto suma y cómo sostenerlo.
+        No se trata de hacer más, sino de entender mejor: qué hacés, cuánto suma y cómo sostenerlo.
       </p>
-
 
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <div class="step-title">Empezás por tus caminatas</div>
+          <div class="step-title">El punto de partida son las caminatas</div>
           <p class="step-text">
-            Medís cuántas calorías estás gastando al caminar, con o sin peso extra. Nada de fórmulas raras: datos claros.
+            Se mide cuántas calorías se gastan al caminar, con o sin peso adicional. Nada de fórmulas complicadas: datos claros.
           </p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <div class="step-title">Ajustás de a pasos chicos</div>
+          <div class="step-title">Ajustes en pasos pequeños</div>
           <p class="step-text">
-            Sumás minutos, recorridos o intensidad según lo que tu vida permita. Pequeños cambios, pero que se sostienen.
+            Se agregan minutos, recorridos o intensidad según lo que permita la rutina diaria. Pequeños cambios que se sostienen en el tiempo.
           </p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <div class="step-title">Después sumás fuerza</div>
+          <div class="step-title">Luego se agrega fuerza</div>
           <p class="step-text">
-            Cuando la base de movimiento está, es más fácil agregar bloques cortos de fuerza (25 minutos) sin abandonar.
+            Cuando la base de movimiento ya está presente, es más fácil incorporar bloques cortos de fuerza (25 minutos) sin abandonar.
           </p>
         </div>
       </div>
@@ -640,8 +687,8 @@
           <span class="badge">Versión simple</span>
           <h3>Calorías quemadas caminando</h3>
           <p>
-            Ingresá tu peso, el tiempo que caminaste y la intensidad. Ideal
-            para estimar tu gasto diario sin complicarte.
+            Ingresar el peso corporal, el tiempo de caminata y la intensidad. Ideal
+            para estimar el gasto diario sin complicaciones.
           </p>
 
           <form id="simpleForm" onsubmit="event.preventDefault(); calculateSimple();">
@@ -680,7 +727,7 @@
                   <option value="brisk">Rápida (≈6 km/h)</option>
                 </select>
                 <span class="hint">
-                  Elegí la opción que más se parezca a tu ritmo habitual.
+                  Seleccione la opción que más se acerque al ritmo habitual.
                 </span>
               </div>
             </div>
@@ -692,7 +739,7 @@
 
           <div id="simpleResult" class="result" aria-live="polite">
             <div class="result-secondary">
-              Ingresá tus datos y te mostramos una estimación.
+              Al ingresar los datos, se muestra una estimación.
             </div>
           </div>
 
@@ -745,8 +792,7 @@
                   placeholder="Ej: 10"
                 />
                 <span class="hint">
-                  Mochila, chaleco lastrado, bolso, carrito, etc. Si no
-                  llevaste peso, dejalo en 0.
+                  Mochila, chaleco lastrado, bolso, carrito, etc. Si no se llevó peso adicional, dejar el valor en 0.
                 </span>
               </div>
 
@@ -774,7 +820,7 @@
                   placeholder="Ej: 4"
                 />
                 <span class="hint">
-                  Si no sabés la distancia, dejalo vacío. Usaremos una velocidad
+                  Si no se conoce la distancia, dejar el campo vacío. Se utilizará una velocidad
                   promedio de 5 km/h.
                 </span>
               </div>
@@ -790,7 +836,7 @@
                   placeholder="Ej: 5"
                 />
                 <span class="hint">
-                  La inclinación real es difícil de medir; si dudás, dejala en
+                  La inclinación real es difícil de medir; si hay dudas, dejarla en
                   0%.
                 </span>
               </div>
@@ -823,15 +869,15 @@
 
           <div id="advancedResult" class="result" aria-live="polite">
             <div class="result-secondary">
-              Ingresá tu peso, el tiempo y, si querés, el peso adicional para ver
-              el impacto real de tu caminata.
+              Ingresar el peso corporal, el tiempo y, si se desea, el peso adicional para ver
+              el impacto real de la caminata.
             </div>
           </div>
 
           <div class="meta-note">
             Esta calculadora se basa en estimaciones habituales de gasto
             energético para caminata y ajustes aproximados por carga e
-            inclinación. Úsala como guía, no como medición clínica.
+            inclinación. Se recomienda usarla como guía, no como medición clínica.
           </div>
         </article>
       </div>
@@ -839,269 +885,280 @@
 
     <!-- PARA QUIÉN ES -->
     <section class="section">
-  <h2 class="section-title">¿Para quién es ViveActivo?</h2>
-  <div class="cards-grid">
-    <div class="card-simple">
-      <h3>Personas con poco tiempo</h3>
-      <p>
-        Si sentís que el día no te alcanza pero igual querés cuidar tu cuerpo,
-        con un enfoque realista y sin promesas exageradas.
-      </p>
-    </div>
-    <div class="card-simple">
-      <h3>Gente real, no atletas</h3>
-      <p>
-        Emprendedores, padres, trabajadores, estudiantes: personas que viven a mil
-        y necesitan que el entrenamiento se adapte a su vida, no al revés.
-      </p>
-    </div>
-    <div class="card-simple">
-      <h3>Quienes ya se frustraron antes</h3>
-      <p>
-        Si ya probaste rutinas imposibles, dietas extremas o planes que duran dos semanas,
-        acá el foco está en construir un hábito sostenible.
-      </p>
-    </div>
+      <h2 class="section-title">¿Para quién es ViveActivo?</h2>
+      <div class="cards-grid">
+        <div class="card-simple">
+          <h3>Personas con poco tiempo</h3>
+          <p>
+            Si el día parece no alcanzar pero aun así se busca cuidar el cuerpo,
+            con un enfoque realista y sin promesas exageradas.
+          </p>
+        </div>
+        <div class="card-simple">
+          <h3>Gente real, no atletas</h3>
+          <p>
+            Emprendedores, padres, trabajadores, estudiantes: personas con muchas responsabilidades
+            que necesitan que el entrenamiento se adapte a su vida, no al revés.
+          </p>
+        </div>
+        <div class="card-simple">
+          <h3>Quienes ya se frustraron antes</h3>
+          <p>
+            Si ya se han probado rutinas imposibles, dietas extremas o planes que no se sostienen,
+            aquí el foco está en construir un hábito sostenible.
+          </p>
+        </div>
+       <div class="card-simple">
+    <h3>Calculadora de calorías por porciones</h3>
+    <p>Estimá tus calorías del día usando porciones reales: puño, vaso, plato, cucharada.</p>
+    <a href="calcular-calorias.html" class="btn btn-primary btn-full">Calcular mis calorías</a>
   </div>
-</section>
 
-
-    <!-- POR QUÉ EXISTE -->
-    <section class="section">
-      <h2 class="section-title">Por qué existe ViveActivo</h2>
-      <p class="section-sub">
-        ViveActivo nace de alguien que entrena, trabaja, tiene familia y sabe lo que es mirar el reloj todo el día.
-      </p>
-      <ul class="list">
-        <li>Porque no todos pueden entrenar 6 veces por semana.</li>
-        <li>Porque la culpa y el “todo o nada” no sirven a largo plazo.</li>
-        <li>Porque moverte un poco, de forma consistente, cambia tu cabeza y tu vida.</li>
-      </ul>
+</div>
+      </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-      <span>© <span id="year"></span> ViveActivo. Todos los derechos reservados.</span>
-      <span>Contacto: <a href="mailto:contacto@viveactivo.com">contacto@viveactivo.com</a></span>
-    </footer>
-  </div>
+        <!-- NOTAS Y GUÍAS -->
+    <section id="notas" class="section">
+      <h2 class="section-title">Guías prácticas</h2>
+      <p class="section-sub">
+        Guías cortas y claras para bajar de peso y estar en forma sin rutinas extremas.
+      </p>
 
-  <script>
-    // Año dinámico en el footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+      <div class="cards-grid">
+        <article class="card-simple">
+          <h3>¿Cuántas calorías se queman al caminar?</h3>
+          <p>
+            Una guía clara para entender cómo influyen el peso, el tiempo y el ritmo
+            en el gasto calórico de una caminata, y cómo usarlo para bajar de peso
+            sin entrenamientos extremos.
+          </p>
+          <a href="calorias-quemadas-caminando.html">Leer guía completa →</a>
+        </article>
+      </div>
+    </section>
 
-    // Utilidad: redondear a una cantidad de decimales
-    function round(value, decimals) {
-      const factor = Math.pow(10, decimals);
-      return Math.round(value * factor) / factor;
-    }
+    <script>
+      'use strict';
 
-    // Intensidad percibida: actualizar etiqueta del slider
-    const advIntensityInput = document.getElementById("advIntensity");
-    const advIntensityLabel = document.getElementById("advIntensityLabel");
-
-    const intensityText = {
-      1: "1 · Muy suave",
-      2: "2 · Suave",
-      3: "3 · Moderada",
-      4: "4 · Intensa",
-      5: "5 · Muy exigente",
-    };
-
-    if (advIntensityInput) {
-      advIntensityInput.addEventListener("input", () => {
-        advIntensityLabel.textContent =
-          intensityText[advIntensityInput.value] || advIntensityInput.value;
-      });
-    }
-
-    // CALCULADORA SIMPLE
-    function calculateSimple() {
-      const weight = parseFloat(
-        document.getElementById("simpleWeight").value
-      );
-      const minutes = parseFloat(
-        document.getElementById("simpleMinutes").value
-      );
-      const intensity = document.getElementById("simpleIntensity").value;
-      const resultDiv = document.getElementById("simpleResult");
-
-      if (!weight || !minutes || weight <= 0 || minutes <= 0) {
-        resultDiv.innerHTML =
-          '<span class="result-error">Por favor, completá tu peso y el tiempo de caminata con valores válidos.</span>';
-        return;
+      // Helper: redondeo seguro
+      function round(value, decimals = 0) {
+        const num = Number(value);
+        if (!Number.isFinite(num)) return 0;
+        const factor = Math.pow(10, decimals);
+        return Math.round(num * factor) / factor;
       }
 
-      // MET aproximados según literatura para caminata
-      let met;
-      if (intensity === "light") {
-        met = 3.0; // caminata ligera
-      } else if (intensity === "moderate") {
-        met = 3.8; // moderada
-      } else {
-        met = 4.5; // rápida
-      }
+      // UI: etiqueta del slider de intensidad (calculadora avanzada)
+      (function initAdvIntensityLabel() {
+        const slider = document.getElementById("advIntensity");
+        const label = document.getElementById("advIntensityLabel");
+        if (!slider || !label) return;
 
-      // Fórmula clásica: kcal = MET * 3.5 * peso(kg) / 200 * tiempo(min)
-      const calories = met * 3.5 * weight / 200 * minutes;
+        const labels = {
+          1: "Muy suave",
+          2: "Suave",
+          3: "Moderada",
+          4: "Alta",
+          5: "Muy exigente"
+        };
 
-      resultDiv.innerHTML = `
-        <div class="result-main">
-          Estimación de gasto:
-          <span class="result-highlight">${round(calories, 1)} kcal</span>
-        </div>
-        <div class="result-secondary">
-          Basado en una caminata de ${minutes} min para una persona de ${round(
-        weight,
-        1
-      )} kg con intensidad ${
-        intensity === "light"
-          ? "ligera"
-          : intensity === "moderate"
-          ? "moderada"
-          : "rápida"
-      }.
-        </div>
-      `;
-    }
+        const render = () => {
+          const v = String(slider.value);
+          label.textContent = `${v} · ${labels[v] || "Moderada"}`;
+        };
 
-    // Obtener MET base según velocidad (si se conoce) o intensidad percibida
-    function getBaseMet(speedKmh, intensityLevel) {
-      let baseMet;
+        slider.addEventListener("input", render);
+        render();
+      })();
 
-      if (speedKmh && speedKmh > 0) {
-        if (speedKmh < 3) baseMet = 2.5;
-        else if (speedKmh < 4) baseMet = 3.0;
-        else if (speedKmh < 5) baseMet = 3.5;
-        else if (speedKmh < 6) baseMet = 4.3;
-        else baseMet = 5.0;
-      } else {
-        // Sin velocidad, usamos intensidad percibida
-        const lvl = intensityLevel || 3;
-        if (lvl <= 1) baseMet = 2.5;
-        else if (lvl === 2) baseMet = 3.0;
-        else if (lvl === 3) baseMet = 3.5;
-        else if (lvl === 4) baseMet = 4.3;
-        else baseMet = 5.0;
-      }
+      // CALCULADORA SIMPLE
+          function calculateSimple() {
+            const weight = parseFloat(
+              document.getElementById("simpleWeight").value
+            );
+            const minutes = parseFloat(
+              document.getElementById("simpleMinutes").value
+            );
+            const intensity = document.getElementById("simpleIntensity").value;
+            const resultDiv = document.getElementById("simpleResult");
 
-      return baseMet;
-    }
+            if (!weight || !minutes || weight <= 0 || minutes <= 0) {
+              resultDiv.innerHTML =
+                '<span class="result-error">Por favor, completá tu peso y el tiempo de caminata con valores válidos.</span>';
+              return;
+            }
 
-    function calculateAdvanced() {
-      const weight = parseFloat(
-        document.getElementById("advWeight").value
-      );
-      const extraWeight =
-        parseFloat(document.getElementById("advExtraWeight").value) || 0;
-      const minutes = parseFloat(
-        document.getElementById("advMinutes").value
-      );
-      const distance =
-        parseFloat(document.getElementById("advDistance").value) || null;
-      const incline =
-        parseFloat(document.getElementById("advIncline").value) || 0;
-      const intensityLevel = parseInt(
-        document.getElementById("advIntensity").value,
-        10
-      );
-      const resultDiv = document.getElementById("advancedResult");
+            // MET aproximados según literatura para caminata
+            let met;
+            if (intensity === "light") {
+              met = 3.0; // caminata ligera
+            } else if (intensity === "moderate") {
+              met = 3.8; // moderada
+            } else {
+              met = 4.5; // rápida
+            }
 
-      if (!weight || !minutes || weight <= 0 || minutes <= 0) {
-        resultDiv.innerHTML =
-          '<span class="result-error">Completá al menos tu peso corporal y el tiempo de caminata con valores válidos.</span>';
-        return;
-      }
+            // Fórmula clásica: kcal = MET * 3.5 * peso(kg) / 200 * tiempo(min)
+            const calories = met * 3.5 * weight / 200 * minutes;
 
-      // Velocidad aproximada
-      let speedKmh = null;
-      if (distance && distance > 0) {
-        const hours = minutes / 60;
-        if (hours > 0) {
-          speedKmh = distance / hours;
-        }
-      } else {
-        // Si no hay distancia, usamos 5 km/h como promedio
-        speedKmh = 5;
-      }
+            resultDiv.innerHTML = `
+              <div class="result-main">
+                Estimación de gasto:
+                <span class="result-highlight">${round(calories, 1)} kcal</span>
+              </div>
+              <div class="result-secondary">
+                Basado en una caminata de ${minutes} min para una persona de ${round(
+              weight,
+              1
+            )} kg con intensidad ${
+              intensity === "light"
+                ? "ligera"
+                : intensity === "moderate"
+                ? "moderada"
+                : "rápida"
+            }.
+              </div>
+            `;
+          }
 
-      // MET base según velocidad / intensidad
-      let baseMet = getBaseMet(speedKmh, intensityLevel);
+          // Obtener MET base según velocidad (si se conoce) o intensidad percibida
+          function getBaseMet(speedKmh, intensityLevel) {
+            let baseMet;
 
-      // Ajuste por inclinación (muy simplificado):
-      // Añadimos ~0.5 MET cada 5% de inclinación.
-      let inclineMet = 0;
-      if (incline > 0) {
-        inclineMet = (incline / 5) * 0.5;
-      }
+            if (speedKmh && speedKmh > 0) {
+              if (speedKmh < 3) baseMet = 2.5;
+              else if (speedKmh < 4) baseMet = 3.0;
+              else if (speedKmh < 5) baseMet = 3.5;
+              else if (speedKmh < 6) baseMet = 4.3;
+              else baseMet = 5.0;
+            } else {
+              // Sin velocidad, usamos intensidad percibida
+              const lvl = intensityLevel || 3;
+              if (lvl <= 1) baseMet = 2.5;
+              else if (lvl === 2) baseMet = 3.0;
+              else if (lvl === 3) baseMet = 3.5;
+              else if (lvl === 4) baseMet = 4.3;
+              else baseMet = 5.0;
+            }
 
-      let metNoLoad = baseMet + inclineMet;
+            return baseMet;
+          }
 
-      // Aseguramos límites razonables
-      if (metNoLoad < 2) metNoLoad = 2;
-      if (metNoLoad > 10) metNoLoad = 10;
+          function calculateAdvanced() {
+            const weight = parseFloat(
+              document.getElementById("advWeight").value
+            );
+            const extraWeight =
+              parseFloat(document.getElementById("advExtraWeight").value) || 0;
+            const minutes = parseFloat(
+              document.getElementById("advMinutes").value
+            );
+            const distance =
+              parseFloat(document.getElementById("advDistance").value) || null;
+            const incline =
+              parseFloat(document.getElementById("advIncline").value) || 0;
+            const intensityLevel = parseInt(
+              document.getElementById("advIntensity").value,
+              10
+            );
+            const resultDiv = document.getElementById("advancedResult");
 
-      // Ajuste por peso adicional:
-      // Aproximación: +8% de gasto por cada 10% de peso extra relativo al cuerpo.
-      let loadFactor = 1;
-      if (extraWeight > 0) {
-        const ratio = extraWeight / weight; // ejemplo: 10 kg extra / 80 kg = 0.125
-        loadFactor = 1 + ratio * 0.8; // 0.125 * 0.8 ≈ 0.10 → +10%
-      }
+            if (!weight || !minutes || weight <= 0 || minutes <= 0) {
+              resultDiv.innerHTML =
+                '<span class="result-error">Complete al menos el peso corporal y el tiempo de caminata con valores válidos.</span>';
+              return;
+            }
 
-      const metWithLoad = metNoLoad * loadFactor;
+            // Velocidad aproximada
+            let speedKmh = null;
+            if (distance && distance > 0) {
+              const hours = minutes / 60;
+              if (hours > 0) {
+                speedKmh = distance / hours;
+              }
+            } else {
+              // Si no hay distancia, usamos 5 km/h como promedio
+              speedKmh = 5;
+            }
 
-      // Cálculo de calorías
-      const kcalNoLoad = metNoLoad * 3.5 * weight / 200 * minutes;
-      const kcalWithLoad = metWithLoad * 3.5 * weight / 200 * minutes;
+            // MET base según velocidad / intensidad
+            let baseMet = getBaseMet(speedKmh, intensityLevel);
 
-      const diffKcal = kcalWithLoad - kcalNoLoad;
-      const diffPercent = kcalNoLoad > 0 ? (diffKcal / kcalNoLoad) * 100 : 0;
+            // Ajuste por inclinación (muy simplificado):
+            // Añadimos ~0.5 MET cada 5% de inclinación.
+            let inclineMet = 0;
+            if (incline > 0) {
+              inclineMet = (incline / 5) * 0.5;
+            }
 
-      const parts = [];
+            let metNoLoad = baseMet + inclineMet;
 
-      parts.push(`
-        <div class="result-main">
-          Con carga: <span class="result-highlight">${round(
-            kcalWithLoad,
-            1
-          )} kcal</span>
-        </div>
-        <div class="result-secondary">
-          Sin peso adicional serían aproximadamente ${round(
-            kcalNoLoad,
-            1
-          )} kcal. La carga que llevaste agrega alrededor de ${round(
-        diffPercent,
-        1
-      )}% más de gasto.
-        </div>
-      `);
+            // Aseguramos límites razonables
+            if (metNoLoad < 2) metNoLoad = 2;
+            if (metNoLoad > 10) metNoLoad = 10;
 
-      if (distance && distance > 0 && speedKmh) {
-        parts.push(
-          `<div class="result-secondary">Velocidad estimada: ${round(
-            speedKmh,
-            2
-          )} km/h en ${round(distance, 2)} km.</div>`
-        );
-      }
+            // Ajuste por peso adicional:
+            // Aproximación: +8% de gasto por cada 10% de peso extra relativo al cuerpo.
+            let loadFactor = 1;
+            if (extraWeight > 0) {
+              const ratio = extraWeight / weight;
+              loadFactor = 1 + ratio * 0.8;
+            }
 
-      if (extraWeight > 0) {
-        parts.push(
-          `<div class="result-secondary">Estás sumando ${round(
-            extraWeight,
-            1
-          )} kg de carga sobre ${round(
-            weight,
-            1
-          )} kg de peso corporal. Es una forma simple, pero no fácil, de aumentar el esfuerzo.</div>`
-        );
-      }
+            const metWithLoad = metNoLoad * loadFactor;
 
-      resultDiv.innerHTML = parts.join("");
-    }
-  </script>
+            // Cálculo de calorías
+            const kcalNoLoad = metNoLoad * 3.5 * weight / 200 * minutes;
+            const kcalWithLoad = metWithLoad * 3.5 * weight / 200 * minutes;
+
+            const diffKcal = kcalWithLoad - kcalNoLoad;
+            const diffPercent = kcalNoLoad > 0 ? (diffKcal / kcalNoLoad) * 100 : 0;
+
+            const parts = [];
+
+            parts.push(`
+              <div class="result-main">
+                Con carga: <span class="result-highlight">${round(
+                  kcalWithLoad,
+                  1
+                )} kcal</span>
+              </div>
+              <div class="result-secondary">
+                Sin peso adicional serían aproximadamente ${round(
+                  kcalNoLoad,
+                  1
+                )} kcal. La carga que llevaste agrega alrededor de ${round(
+              diffPercent,
+              1
+            )}% más de gasto.
+              </div>
+            `);
+
+            if (distance && distance > 0 && speedKmh) {
+              parts.push(
+                `<div class="result-secondary">Velocidad estimada: ${round(
+                  speedKmh,
+                  2
+                )} km/h en ${round(distance, 2)} km.</div>`
+              );
+            }
+
+            if (extraWeight > 0) {
+              parts.push(
+                `<div class="result-secondary">Estás sumando ${round(
+                  extraWeight,
+                  1
+                )} kg de carga sobre ${round(
+                  weight,
+                  1
+                )} kg de peso corporal. Es una forma simple, pero no fácil, de aumentar el esfuerzo.</div>`
+              );
+            }
+
+            resultDiv.innerHTML = parts.join("");
+          }
+    </script>
+
 </body>
 </html>
-
