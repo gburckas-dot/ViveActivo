@@ -2,33 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>ViveActivo – Pequeños pasos, grandes cambios</title>
+  <title>ViveActivo – Entrená en menos tiempo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- SEO base -->
   <meta
     name="description"
-    content="ViveActivo es un método simple y sostenible para mejorar tu salud. Pequeños pasos, grandes cambios: caminata, déficit calórico, rucking y hábitos que podés sostener en la vida real."
+    content="ViveActivo te da herramientas simples para entrenar en menos tiempo y entender tu gasto calórico caminando, con foco en hábitos sostenibles para gente real."
   />
-  <meta
-    name="keywords"
-    content="déficit calórico, caminata, rucking, bajar de peso caminando, salud simple, bienestar sostenible, hábitos saludables, perder grasa, método fácil de salud, guía para caminar, entrenamiento minimalista"
-  />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://gburckas-dot.github.io/ViveActivo/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="ViveActivo – Pequeños pasos, grandes cambios" />
-  <meta property="og:description" content="Bienestar simple, caminata, déficit calórico, rucking y hábitos que podés sostener en la vida real. Pequeños pasos, grandes cambios." />
-  <meta property="og:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
-  <meta property="og:url" content="https://gburckas-dot.github.io/ViveActivo/" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ViveActivo – Pequeños pasos, grandes cambios" />
-  <meta name="twitter:description" content="Bienestar simple, caminata, déficit calórico, rucking y hábitos sostenibles. Mejorá tu vida un paso a la vez." />
-  <meta name="twitter:image" content="https://gburckas-dot.github.io/ViveActivo/imagen_destacada.png" />
 
   <!-- Tipografía de Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,18 +69,6 @@
       display: flex;
       align-items: center;
       gap: 10px;
-    }
-
-    .logo-img {
-      height: 140px;
-      width: auto;
-      display: block;
-    }
-
-    @media (max-width: 768px) {
-      .logo-img {
-        height: 96px;
-      }
     }
 
     .logo-icon {
@@ -364,7 +331,7 @@
       margin-bottom: 4px;
     }
 
-    /* CALCULADORAS DE CAMINATA */
+    /* CALCULADORAS DE CAMINATA (adaptado del index anterior) */
 
     .calculators-grid {
       display: grid;
@@ -555,60 +522,50 @@
       }
     }
   </style>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-X791HK4NMY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-X791HK4NMY');
-</script>
-
-
 </head>
-
 <body>
   <div class="page">
     <!-- HEADER -->
     <header class="header">
-  <div class="logo">
-    <img src="logo-viveactivo.png" alt="ViveActivo logo" class="logo-img">
-  </div>
-  <div class="header-cta">
-    <button class="btn btn-ghost" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
-      Ver calculadoras
-    </button>
-    <a class="btn btn-primary" href="calcular-calorias.html">
-      Calcular calorías consumidas →
-    </a>
-  </div>
-</header>
+      <div class="logo">
+        <span class="logo-icon">🚶‍♂️</span>
+        <div class="logo-text">
+           <div class="logo-main">Vive<span>Activo</span></div>
+           <div class="logo-sub">Pequeños pasos, cambios grandes.</div>
+         </div>
 
+      </div>
+      <div class="header-cta">
+        <button class="btn btn-ghost" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+          Ver calculadoras
+        </button>
+        <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+          Empezar ahora →
+        </button>
+      </div>
+    </header>
 
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-text">
-        <h1>
-          No necesitas más tiempo.<br>
-          <span>Necesitas un método sostenible.</span>
-        </h1>
-        <p>
-          La caminata es una base sólida, pero ViveActivo va más allá: combina movimiento diario,
-fuerza sencilla y hábitos claros para ayudar a bajar de peso, mejorar el bienestar y
-despejar la mente sin rutinas extremas.
-
-        </p>
-        <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
-          Ver cálculos de caminata →
-        </button>
-        <div class="hero-badges">
-          <span class="badge-pill">⏱ Sesiones sostenibles</span>
-          <span class="badge-pill">🚶‍♂️ Caminatas que cuentan</span>
-          <span class="badge-pill">💪 Añade fuerza cuando sea el momento adecuado</span>
-        </div>
-      </div>
+     <div class="hero-text">
+  <h1>
+    No necesitás más tiempo.<br>
+    <span>Necesitás un método sostenible.</span>
+  </h1>
+  <p>
+    La caminata es el puente entre tu vida real y los resultados que querés.
+    Una herramienta accesible y poderosa para mejorar tu bienestar, estés
+    empezando, retomando o ya entrenes hace años.
+  </p>
+  <button class="btn btn-primary" onclick="document.getElementById('calculadoras').scrollIntoView({behavior:'smooth'})">
+    Ver cálculos de caminata →
+  </button>
+  <div class="hero-badges">
+    <span class="badge-pill">⏱ Sesiones sostenibles</span>
+    <span class="badge-pill">🚶‍♂️ Caminatas que cuentan</span>
+    <span class="badge-pill">💪 Sumá fuerza cuando estés listo</span>
+  </div>
+</div>
 
       <aside class="hero-card">
         <div class="hero-card-title">
@@ -630,8 +587,8 @@ despejar la mente sin rutinas extremas.
           </div>
         </div>
         <div class="hero-highlight">
-          Se empieza con lo que ya se tiene hoy: caminatas, tiempo y contexto.
-          ViveActivo ayuda a utilizarlos a favor en lugar de ir en contra de ellos.
+          Empezás con lo que tenés hoy: tus caminatas, tus tiempos, tu contexto.
+          ViveActivo te ayuda a usarlos a favor en lugar de pelear contra ellos.
         </div>
       </aside>
     </section>
@@ -640,29 +597,30 @@ despejar la mente sin rutinas extremas.
     <section class="section">
       <h2 class="section-title">Cómo funciona ViveActivo</h2>
       <p class="section-sub">
-        No se trata de hacer más, sino de entender mejor: qué hacés, cuánto suma y cómo sostenerlo.
+  No se trata de hacer más, sino de entender mejor: qué hacés, cuánto suma y cómo sostenerlo.
       </p>
+
 
       <div class="steps">
         <div class="step">
           <div class="step-number">1</div>
-          <div class="step-title">El punto de partida son las caminatas</div>
+          <div class="step-title">Empezás por tus caminatas</div>
           <p class="step-text">
-            Se mide cuántas calorías se gastan al caminar, con o sin peso adicional. Nada de fórmulas complicadas: datos claros.
+            Medís cuántas calorías estás gastando al caminar, con o sin peso extra. Nada de fórmulas raras: datos claros.
           </p>
         </div>
         <div class="step">
           <div class="step-number">2</div>
-          <div class="step-title">Ajustes en pasos pequeños</div>
+          <div class="step-title">Ajustás de a pasos chicos</div>
           <p class="step-text">
-            Se agregan minutos, recorridos o intensidad según lo que permita la rutina diaria. Pequeños cambios que se sostienen en el tiempo.
+            Sumás minutos, recorridos o intensidad según lo que tu vida permita. Pequeños cambios, pero que se sostienen.
           </p>
         </div>
         <div class="step">
           <div class="step-number">3</div>
-          <div class="step-title">Luego se agrega fuerza</div>
+          <div class="step-title">Después sumás fuerza</div>
           <p class="step-text">
-            Cuando la base de movimiento ya está presente, es más fácil incorporar bloques cortos de fuerza (25 minutos) sin abandonar.
+            Cuando la base de movimiento está, es más fácil agregar bloques cortos de fuerza (25 minutos) sin abandonar.
           </p>
         </div>
       </div>
@@ -682,8 +640,8 @@ despejar la mente sin rutinas extremas.
           <span class="badge">Versión simple</span>
           <h3>Calorías quemadas caminando</h3>
           <p>
-            Ingresar el peso corporal, el tiempo de caminata y la intensidad. Ideal
-            para estimar el gasto diario sin complicaciones.
+            Ingresá tu peso, el tiempo que caminaste y la intensidad. Ideal
+            para estimar tu gasto diario sin complicarte.
           </p>
 
           <form id="simpleForm" onsubmit="event.preventDefault(); calculateSimple();">
@@ -722,7 +680,7 @@ despejar la mente sin rutinas extremas.
                   <option value="brisk">Rápida (≈6 km/h)</option>
                 </select>
                 <span class="hint">
-                  Seleccione la opción que más se acerque al ritmo habitual.
+                  Elegí la opción que más se parezca a tu ritmo habitual.
                 </span>
               </div>
             </div>
@@ -734,7 +692,7 @@ despejar la mente sin rutinas extremas.
 
           <div id="simpleResult" class="result" aria-live="polite">
             <div class="result-secondary">
-              Al ingresar los datos, se muestra una estimación.
+              Ingresá tus datos y te mostramos una estimación.
             </div>
           </div>
 
@@ -787,7 +745,8 @@ despejar la mente sin rutinas extremas.
                   placeholder="Ej: 10"
                 />
                 <span class="hint">
-                  Mochila, chaleco lastrado, bolso, carrito, etc. Si no se llevó peso adicional, dejar el valor en 0.
+                  Mochila, chaleco lastrado, bolso, carrito, etc. Si no
+                  llevaste peso, dejalo en 0.
                 </span>
               </div>
 
@@ -815,7 +774,7 @@ despejar la mente sin rutinas extremas.
                   placeholder="Ej: 4"
                 />
                 <span class="hint">
-                  Si no se conoce la distancia, dejar el campo vacío. Se utilizará una velocidad
+                  Si no sabés la distancia, dejalo vacío. Usaremos una velocidad
                   promedio de 5 km/h.
                 </span>
               </div>
@@ -831,7 +790,7 @@ despejar la mente sin rutinas extremas.
                   placeholder="Ej: 5"
                 />
                 <span class="hint">
-                  La inclinación real es difícil de medir; si hay dudas, dejarla en
+                  La inclinación real es difícil de medir; si dudás, dejala en
                   0%.
                 </span>
               </div>
@@ -864,15 +823,15 @@ despejar la mente sin rutinas extremas.
 
           <div id="advancedResult" class="result" aria-live="polite">
             <div class="result-secondary">
-              Ingresar el peso corporal, el tiempo y, si se desea, el peso adicional para ver
-              el impacto real de la caminata.
+              Ingresá tu peso, el tiempo y, si querés, el peso adicional para ver
+              el impacto real de tu caminata.
             </div>
           </div>
 
           <div class="meta-note">
             Esta calculadora se basa en estimaciones habituales de gasto
             energético para caminata y ajustes aproximados por carga e
-            inclinación. Se recomienda usarla como guía, no como medición clínica.
+            inclinación. Úsala como guía, no como medición clínica.
           </div>
         </article>
       </div>
@@ -880,58 +839,81 @@ despejar la mente sin rutinas extremas.
 
     <!-- PARA QUIÉN ES -->
     <section class="section">
-      <h2 class="section-title">¿Para quién es ViveActivo?</h2>
-      <div class="cards-grid">
-        <div class="card-simple">
-          <h3>Personas con poco tiempo</h3>
-          <p>
-            Si el día parece no alcanzar pero aun así se busca cuidar el cuerpo,
-            con un enfoque realista y sin promesas exageradas.
-          </p>
-        </div>
-        <div class="card-simple">
-          <h3>Gente real, no atletas</h3>
-          <p>
-            Emprendedores, padres, trabajadores, estudiantes: personas con muchas responsabilidades
-            que necesitan que el entrenamiento se adapte a su vida, no al revés.
-          </p>
-        </div>
-        <div class="card-simple">
-          <h3>Quienes ya se frustraron antes</h3>
-          <p>
-            Si ya se han probado rutinas imposibles, dietas extremas o planes que no se sostienen,
-            aquí el foco está en construir un hábito sostenible.
-          </p>
-        </div>
-       <div class="card-simple">
-    <h3>Calculadora de calorías por porciones</h3>
-    <p>Estimá tus calorías del día usando porciones reales: puño, vaso, plato, cucharada.</p>
-    <a href="calcular-calorias.html" class="btn btn-primary btn-full">Calcular mis calorías</a>
+  <h2 class="section-title">¿Para quién es ViveActivo?</h2>
+  <div class="cards-grid">
+    <div class="card-simple">
+      <h3>Personas con poco tiempo</h3>
+      <p>
+        Si sentís que el día no te alcanza pero igual querés cuidar tu cuerpo,
+        con un enfoque realista y sin promesas exageradas.
+      </p>
+    </div>
+    <div class="card-simple">
+      <h3>Gente real, no atletas</h3>
+      <p>
+        Emprendedores, padres, trabajadores, estudiantes: personas que viven a mil
+        y necesitan que el entrenamiento se adapte a su vida, no al revés.
+      </p>
+    </div>
+    <div class="card-simple">
+      <h3>Quienes ya se frustraron antes</h3>
+      <p>
+        Si ya probaste rutinas imposibles, dietas extremas o planes que duran dos semanas,
+        acá el foco está en construir un hábito sostenible.
+      </p>
+    </div>
   </div>
-
-</div>
-      </div>
-    </section>
-
-    <!-- NOTAS Y GUÍAS -->
-    <section id="notas">
-  <h2>Guías prácticas</h2>
-
-  <article class="card-simple">
-    <h3>¿Cuántas calorías se queman al caminar?</h3>
-
-    <p>
-      Una guía clara para entender cómo influyen el peso, el tiempo y el ritmo
-      en el gasto calórico de una caminata, y cómo usarlo para bajar de peso
-      sin entrenamientos extremos.
-    </p>
-
-    <a href="calorias-quemadas-caminando.html">
-      Leer guía completa →
-    </a>
-  </article>
 </section>
 
+
+    <!-- POR QUÉ EXISTE -->
+    <section class="section">
+      <h2 class="section-title">Por qué existe ViveActivo</h2>
+      <p class="section-sub">
+        ViveActivo nace de alguien que entrena, trabaja, tiene familia y sabe lo que es mirar el reloj todo el día.
+      </p>
+      <ul class="list">
+        <li>Porque no todos pueden entrenar 6 veces por semana.</li>
+        <li>Porque la culpa y el “todo o nada” no sirven a largo plazo.</li>
+        <li>Porque moverte un poco, de forma consistente, cambia tu cabeza y tu vida.</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <span>© <span id="year"></span> ViveActivo. Todos los derechos reservados.</span>
+      <span>Contacto: <a href="mailto:contacto@viveactivo.com">contacto@viveactivo.com</a></span>
+    </footer>
+  </div>
+
+  <script>
+    // Año dinámico en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Utilidad: redondear a una cantidad de decimales
+    function round(value, decimals) {
+      const factor = Math.pow(10, decimals);
+      return Math.round(value * factor) / factor;
+    }
+
+    // Intensidad percibida: actualizar etiqueta del slider
+    const advIntensityInput = document.getElementById("advIntensity");
+    const advIntensityLabel = document.getElementById("advIntensityLabel");
+
+    const intensityText = {
+      1: "1 · Muy suave",
+      2: "2 · Suave",
+      3: "3 · Moderada",
+      4: "4 · Intensa",
+      5: "5 · Muy exigente",
+    };
+
+    if (advIntensityInput) {
+      advIntensityInput.addEventListener("input", () => {
+        advIntensityLabel.textContent =
+          intensityText[advIntensityInput.value] || advIntensityInput.value;
+      });
+    }
 
     // CALCULADORA SIMPLE
     function calculateSimple() {
@@ -1027,7 +1009,7 @@ despejar la mente sin rutinas extremas.
 
       if (!weight || !minutes || weight <= 0 || minutes <= 0) {
         resultDiv.innerHTML =
-          '<span class="result-error">Complete al menos el peso corporal y el tiempo de caminata con valores válidos.</span>';
+          '<span class="result-error">Completá al menos tu peso corporal y el tiempo de caminata con valores válidos.</span>';
         return;
       }
 
@@ -1063,8 +1045,8 @@ despejar la mente sin rutinas extremas.
       // Aproximación: +8% de gasto por cada 10% de peso extra relativo al cuerpo.
       let loadFactor = 1;
       if (extraWeight > 0) {
-        const ratio = extraWeight / weight;
-        loadFactor = 1 + ratio * 0.8;
+        const ratio = extraWeight / weight; // ejemplo: 10 kg extra / 80 kg = 0.125
+        loadFactor = 1 + ratio * 0.8; // 0.125 * 0.8 ≈ 0.10 → +10%
       }
 
       const metWithLoad = metNoLoad * loadFactor;
@@ -1122,3 +1104,4 @@ despejar la mente sin rutinas extremas.
   </script>
 </body>
 </html>
+
