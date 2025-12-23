@@ -13,13 +13,8 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
-  color:var(--color-text);
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
+
+body { background: red !important; }
 
 
 a{text-decoration:none;color:inherit}
