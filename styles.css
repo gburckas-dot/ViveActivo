@@ -16,7 +16,10 @@
 
 body{
   font-family:"Poppins",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-  background: radial-gradient(circle at top left,#ECFEFF 0,#F9FAFB 40%,#FFFFFF 100%);
+  background:
+    radial-gradient(circle at top left, rgba(236,254,255,1) 0%, rgba(249,250,251,1) 45%, rgba(255,255,255,1) 100%),
+    radial-gradient(circle at 20% 10%, rgba(16,185,129,0.10) 0%, rgba(16,185,129,0) 45%),
+    radial-gradient(circle at 80% 20%, rgba(59,130,246,0.08) 0%, rgba(59,130,246,0) 45%);
   color:var(--color-text);
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
